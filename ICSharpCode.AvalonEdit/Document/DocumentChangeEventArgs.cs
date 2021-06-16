@@ -53,11 +53,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// <summary>
 		/// Gets the OffsetChangeMap, or null if the default offset map (=single replacement) is being used.
 		/// </summary>
-		internal OffsetChangeMap OffsetChangeMapOrNull {
-			get {
-				return offsetChangeMap;
-			}
-		}
+		internal OffsetChangeMap OffsetChangeMapOrNull => offsetChangeMap;
 
 		/// <summary>
 		/// Gets the new offset where the specified offset moves after this document change.

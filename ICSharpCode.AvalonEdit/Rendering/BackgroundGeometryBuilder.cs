@@ -41,8 +41,8 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Gets/sets the radius of the rounded corners.
 		/// </summary>
 		public double CornerRadius {
-			get { return cornerRadius; }
-			set { cornerRadius = value; }
+			get => cornerRadius;
+			set => cornerRadius = value;
 		}
 
 		/// <summary>

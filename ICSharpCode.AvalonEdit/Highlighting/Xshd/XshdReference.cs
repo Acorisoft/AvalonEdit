@@ -33,23 +33,17 @@ namespace ICSharpCode.AvalonEdit.Highlighting.Xshd
 		/// <summary>
 		/// Gets the reference.
 		/// </summary>
-		public string ReferencedDefinition {
-			get { return referencedDefinition; }
-		}
+		public string ReferencedDefinition => referencedDefinition;
 
 		/// <summary>
 		/// Gets the reference.
 		/// </summary>
-		public string ReferencedElement {
-			get { return referencedElement; }
-		}
+		public string ReferencedElement => referencedElement;
 
 		/// <summary>
 		/// Gets the inline element.
 		/// </summary>
-		public T InlineElement {
-			get { return inlineElement; }
-		}
+		public T InlineElement => inlineElement;
 
 		/// <summary>
 		/// Creates a new XshdReference instance.

@@ -54,8 +54,8 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// Gets/Sets the current insertion offset.
 		/// </summary>
 		public int InsertionOffset {
-			get { return documentTextWriter.InsertionOffset; }
-			set { documentTextWriter.InsertionOffset = value; }
+			get => documentTextWriter.InsertionOffset;
+			set => documentTextWriter.InsertionOffset = value;
 		}
 
 

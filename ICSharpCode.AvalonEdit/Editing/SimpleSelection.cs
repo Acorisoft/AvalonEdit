@@ -45,18 +45,10 @@ namespace ICSharpCode.AvalonEdit.Editing
 		}
 
 		/// <inheritdoc/>
-		public override IEnumerable<SelectionSegment> Segments {
-			get {
-				return ExtensionMethods.Sequence<SelectionSegment>(new SelectionSegment(startOffset, start.VisualColumn, endOffset, end.VisualColumn));
-			}
-		}
+		public override IEnumerable<SelectionSegment> Segments => ExtensionMethods.Sequence<SelectionSegment>(new SelectionSegment(startOffset, start.VisualColumn, endOffset, end.VisualColumn));
 
 		/// <inheritdoc/>
-		public override ISegment SurroundingSegment {
-			get {
-				return new SelectionSegment(startOffset, endOffset);
-			}
-		}
+		public override ISegment SurroundingSegment => new SelectionSegment(startOffset, endOffset);
 
 		/// <inheritdoc/>
 		public override void ReplaceSelectionWithText(string newText)
@@ -91,13 +83,9 @@ namespace ICSharpCode.AvalonEdit.Editing
 			}
 		}
 
-		public override TextViewPosition StartPosition {
-			get { return start; }
-		}
+		public override TextViewPosition StartPosition => start;
 
-		public override TextViewPosition EndPosition {
-			get { return end; }
-		}
+		public override TextViewPosition EndPosition => end;
 
 		/// <inheritdoc/>
 		public override Selection UpdateOnDocumentChange(DocumentChangeEventArgs e)
@@ -120,16 +108,10 @@ namespace ICSharpCode.AvalonEdit.Editing
 		}
 
 		/// <inheritdoc/>
-		public override bool IsEmpty {
-			get { return startOffset == endOffset && start.VisualColumn == end.VisualColumn; }
-		}
+		public override bool IsEmpty => startOffset == endOffset && start.VisualColumn == end.VisualColumn;
 
 		/// <inheritdoc/>
-		public override int Length {
-			get {
-				return Math.Abs(endOffset - startOffset);
-			}
-		}
+		public override int Length => Math.Abs(endOffset - startOffset);
 
 		/// <inheritdoc/>
 		public override Selection SetEndpoint(TextViewPosition endPosition)

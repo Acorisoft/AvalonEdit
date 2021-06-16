@@ -33,9 +33,7 @@ namespace ICSharpCode.AvalonEdit.Utils
 		/// <summary>
 		/// Gets the caret blink time.
 		/// </summary>
-		public static TimeSpan CaretBlinkTime {
-			get { return TimeSpan.FromMilliseconds(SafeNativeMethods.GetCaretBlinkTime()); }
-		}
+		public static TimeSpan CaretBlinkTime => TimeSpan.FromMilliseconds(SafeNativeMethods.GetCaretBlinkTime());
 
 		/// <summary>
 		/// Creates an invisible Win32 caret for the specified Visual with the specified size (coordinates local to the owner visual).

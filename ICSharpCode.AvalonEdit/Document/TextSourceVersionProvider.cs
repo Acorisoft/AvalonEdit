@@ -43,9 +43,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// <summary>
 		/// Gets the current version.
 		/// </summary>
-		public ITextSourceVersion CurrentVersion {
-			get { return currentVersion; }
-		}
+		public ITextSourceVersion CurrentVersion => currentVersion;
 
 		/// <summary>
 		/// Replaces the current version with a new version.

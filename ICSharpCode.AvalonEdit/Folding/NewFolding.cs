@@ -73,12 +73,8 @@ namespace ICSharpCode.AvalonEdit.Folding
 			this.DefaultClosed = false;
 		}
 
-		int ISegment.Offset {
-			get { return this.StartOffset; }
-		}
+		int ISegment.Offset => this.StartOffset;
 
-		int ISegment.Length {
-			get { return this.EndOffset - this.StartOffset; }
-		}
+		int ISegment.Length => this.EndOffset - this.StartOffset;
 	}
 }

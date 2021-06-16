@@ -99,8 +99,8 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Gets/Sets the document displayed by the text editor.
 		/// </summary>
 		public TextDocument Document {
-			get { return (TextDocument)GetValue(DocumentProperty); }
-			set { SetValue(DocumentProperty, value); }
+			get => (TextDocument)GetValue(DocumentProperty);
+			set => SetValue(DocumentProperty, value);
 		}
 
 		static void OnDocumentChanged(DependencyObject dp, DependencyPropertyChangedEventArgs e)
@@ -108,11 +108,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 			((TextView)dp).OnDocumentChanged((TextDocument)e.OldValue, (TextDocument)e.NewValue);
 		}
 
-		internal double FontSize {
-			get {
-				return (double)GetValue(TextBlock.FontSizeProperty);
-			}
-		}
+		internal double FontSize => (double)GetValue(TextBlock.FontSizeProperty);
 
 		/// <summary>
 		/// Occurs when the document property has changed.
@@ -202,8 +198,8 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Gets/Sets the options used by the text editor.
 		/// </summary>
 		public TextEditorOptions Options {
-			get { return (TextEditorOptions)GetValue(OptionsProperty); }
-			set { SetValue(OptionsProperty, value); }
+			get => (TextEditorOptions)GetValue(OptionsProperty);
+			set => SetValue(OptionsProperty, value);
 		}
 
 		/// <summary>
@@ -252,9 +248,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets a collection where element generators can be registered.
 		/// </summary>
-		public IList<VisualLineElementGenerator> ElementGenerators {
-			get { return elementGenerators; }
-		}
+		public IList<VisualLineElementGenerator> ElementGenerators => elementGenerators;
 
 		void ElementGenerator_Added(VisualLineElementGenerator generator)
 		{
@@ -273,9 +267,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets a collection where line transformers can be registered.
 		/// </summary>
-		public IList<IVisualLineTransformer> LineTransformers {
-			get { return lineTransformers; }
-		}
+		public IList<IVisualLineTransformer> LineTransformers => lineTransformers;
 
 		void LineTransformer_Added(IVisualLineTransformer lineTransformer)
 		{
@@ -331,9 +323,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets the list of layers displayed in the text view.
 		/// </summary>
-		public UIElementCollection Layers {
-			get { return layers; }
-		}
+		public UIElementCollection Layers => layers;
 
 		sealed class LayerCollection : UIElementCollection
 		{
@@ -424,9 +414,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		}
 
 		/// <inheritdoc/>
-		protected override int VisualChildrenCount {
-			get { return layers.Count + inlineObjects.Count; }
-		}
+		protected override int VisualChildrenCount => layers.Count + inlineObjects.Count;
 
 		/// <inheritdoc/>
 		protected override Visual GetVisualChild(int index)
@@ -562,8 +550,8 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Gets/sets the Brush used for displaying non-printable characters.
 		/// </summary>
 		public Brush NonPrintableCharacterBrush {
-			get { return (Brush)GetValue(NonPrintableCharacterBrushProperty); }
-			set { SetValue(NonPrintableCharacterBrushProperty, value); }
+			get => (Brush)GetValue(NonPrintableCharacterBrushProperty);
+			set => SetValue(NonPrintableCharacterBrushProperty, value);
 		}
 
 		/// <summary>
@@ -577,8 +565,8 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Gets/sets the Brush used for displaying link texts.
 		/// </summary>
 		public Brush LinkTextForegroundBrush {
-			get { return (Brush)GetValue(LinkTextForegroundBrushProperty); }
-			set { SetValue(LinkTextForegroundBrushProperty, value); }
+			get => (Brush)GetValue(LinkTextForegroundBrushProperty);
+			set => SetValue(LinkTextForegroundBrushProperty, value);
 		}
 
 		/// <summary>
@@ -592,8 +580,8 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Gets/sets the Brush used for the background of link texts.
 		/// </summary>
 		public Brush LinkTextBackgroundBrush {
-			get { return (Brush)GetValue(LinkTextBackgroundBrushProperty); }
-			set { SetValue(LinkTextBackgroundBrushProperty, value); }
+			get => (Brush)GetValue(LinkTextBackgroundBrushProperty);
+			set => SetValue(LinkTextBackgroundBrushProperty, value);
 		}
 		#endregion
 
@@ -612,8 +600,8 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Set TextEditorOptions.EnableHyperlinks and EnableEmailHyperlinks to false to disable links completely.
 		/// </remarks>
 		public bool LinkTextUnderline {
-			get { return (bool)GetValue(LinkTextUnderlineProperty); }
-			set { SetValue(LinkTextUnderlineProperty, value); }
+			get => (bool)GetValue(LinkTextUnderlineProperty);
+			set => SetValue(LinkTextUnderlineProperty, value);
 		}
 
 		#region Redraw methods / VisualLine invalidation
@@ -848,9 +836,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Accessing the visual lines property will cause a <see cref="VisualLinesInvalidException"/>
 		/// if this property is <c>false</c>.
 		/// </summary>
-		public bool VisualLinesValid {
-			get { return visibleVisualLines != null; }
-		}
+		public bool VisualLinesValid => visibleVisualLines != null;
 
 		/// <summary>
 		/// Occurs when the TextView is about to be measured and will regenerate its visual lines.
@@ -1219,9 +1205,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets the list of background renderers.
 		/// </summary>
-		public IList<IBackgroundRenderer> BackgroundRenderers {
-			get { return backgroundRenderers; }
-		}
+		public IList<IBackgroundRenderer> BackgroundRenderers => backgroundRenderers;
 
 		void BackgroundRenderer_Added(IBackgroundRenderer renderer)
 		{
@@ -1352,7 +1336,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 
 		bool canVerticallyScroll;
 		bool IScrollInfo.CanVerticallyScroll {
-			get { return canVerticallyScroll; }
+			get => canVerticallyScroll;
 			set {
 				if (canVerticallyScroll != value) {
 					canVerticallyScroll = value;
@@ -1362,7 +1346,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		}
 		bool canHorizontallyScroll;
 		bool IScrollInfo.CanHorizontallyScroll {
-			get { return canHorizontallyScroll; }
+			get => canHorizontallyScroll;
 			set {
 				if (canHorizontallyScroll != value) {
 					canHorizontallyScroll = value;
@@ -1372,42 +1356,28 @@ namespace ICSharpCode.AvalonEdit.Rendering
 			}
 		}
 
-		double IScrollInfo.ExtentWidth {
-			get { return scrollExtent.Width; }
-		}
+		double IScrollInfo.ExtentWidth => scrollExtent.Width;
 
-		double IScrollInfo.ExtentHeight {
-			get { return scrollExtent.Height; }
-		}
+		double IScrollInfo.ExtentHeight => scrollExtent.Height;
 
-		double IScrollInfo.ViewportWidth {
-			get { return scrollViewport.Width; }
-		}
+		double IScrollInfo.ViewportWidth => scrollViewport.Width;
 
-		double IScrollInfo.ViewportHeight {
-			get { return scrollViewport.Height; }
-		}
+		double IScrollInfo.ViewportHeight => scrollViewport.Height;
 
 		/// <summary>
 		/// Gets the horizontal scroll offset.
 		/// </summary>
-		public double HorizontalOffset {
-			get { return scrollOffset.X; }
-		}
+		public double HorizontalOffset => scrollOffset.X;
 
 		/// <summary>
 		/// Gets the vertical scroll offset.
 		/// </summary>
-		public double VerticalOffset {
-			get { return scrollOffset.Y; }
-		}
+		public double VerticalOffset => scrollOffset.Y;
 
 		/// <summary>
 		/// Gets the scroll offset;
 		/// </summary>
-		public Vector ScrollOffset {
-			get { return scrollOffset; }
-		}
+		public Vector ScrollOffset => scrollOffset;
 
 		/// <summary>
 		/// Occurs when the scroll offset has changed.
@@ -1846,9 +1816,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// use <c>TextView.GetService()</c> instead of <c>TextView.Services.GetService()</c> to ensure
 		/// that document services can be found as well.
 		/// </remarks>
-		public ServiceContainer Services {
-			get { return services; }
-		}
+		public ServiceContainer Services => services;
 
 		/// <summary>
 		/// Retrieves a service from the text view.
@@ -1911,32 +1879,32 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Occurs when the mouse has hovered over a fixed location for some time.
 		/// </summary>
 		public event MouseEventHandler PreviewMouseHover {
-			add { AddHandler(PreviewMouseHoverEvent, value); }
-			remove { RemoveHandler(PreviewMouseHoverEvent, value); }
+			add => AddHandler(PreviewMouseHoverEvent, value);
+			remove => RemoveHandler(PreviewMouseHoverEvent, value);
 		}
 
 		/// <summary>
 		/// Occurs when the mouse has hovered over a fixed location for some time.
 		/// </summary>
 		public event MouseEventHandler MouseHover {
-			add { AddHandler(MouseHoverEvent, value); }
-			remove { RemoveHandler(MouseHoverEvent, value); }
+			add => AddHandler(MouseHoverEvent, value);
+			remove => RemoveHandler(MouseHoverEvent, value);
 		}
 
 		/// <summary>
 		/// Occurs when the mouse had previously hovered but now started moving again.
 		/// </summary>
 		public event MouseEventHandler PreviewMouseHoverStopped {
-			add { AddHandler(PreviewMouseHoverStoppedEvent, value); }
-			remove { RemoveHandler(PreviewMouseHoverStoppedEvent, value); }
+			add => AddHandler(PreviewMouseHoverStoppedEvent, value);
+			remove => RemoveHandler(PreviewMouseHoverStoppedEvent, value);
 		}
 
 		/// <summary>
 		/// Occurs when the mouse had previously hovered but now started moving again.
 		/// </summary>
 		public event MouseEventHandler MouseHoverStopped {
-			add { AddHandler(MouseHoverStoppedEvent, value); }
-			remove { RemoveHandler(MouseHoverStoppedEvent, value); }
+			add => AddHandler(MouseHoverStoppedEvent, value);
+			remove => RemoveHandler(MouseHoverStoppedEvent, value);
 		}
 
 		MouseHoverLogic hoverLogic;
@@ -1987,12 +1955,9 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets the height of the document.
 		/// </summary>
-		public double DocumentHeight {
-			get {
-				// return 0 if there is no document = no heightTree
-				return heightTree != null ? heightTree.TotalHeight : 0;
-			}
-		}
+		public double DocumentHeight =>
+			// return 0 if there is no document = no heightTree
+			heightTree != null ? heightTree.TotalHeight : 0;
 
 		/// <summary>
 		/// Gets the document line at the specified visual position.
@@ -2067,8 +2032,8 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <seealso cref="TextEditorOptions.ShowColumnRuler"/>
 		/// </summary>
 		public Pen ColumnRulerPen {
-			get { return (Pen)GetValue(ColumnRulerPenProperty); }
-			set { SetValue(ColumnRulerPenProperty, value); }
+			get => (Pen)GetValue(ColumnRulerPenProperty);
+			set => SetValue(ColumnRulerPenProperty, value);
 		}
 
 		/// <summary>
@@ -2081,8 +2046,8 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Gets/Sets the background brush used by current line highlighter.
 		/// </summary>
 		public Brush CurrentLineBackground {
-			get { return (Brush)GetValue(CurrentLineBackgroundProperty); }
-			set { SetValue(CurrentLineBackgroundProperty, value); }
+			get => (Brush)GetValue(CurrentLineBackgroundProperty);
+			set => SetValue(CurrentLineBackgroundProperty, value);
 		}
 
 		/// <summary>
@@ -2095,23 +2060,21 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Gets/Sets the background brush used for the current line.
 		/// </summary>
 		public Pen CurrentLineBorder {
-			get { return (Pen)GetValue(CurrentLineBorderProperty); }
-			set { SetValue(CurrentLineBorderProperty, value); }
+			get => (Pen)GetValue(CurrentLineBorderProperty);
+			set => SetValue(CurrentLineBorderProperty, value);
 		}
 
 		/// <summary>
 		/// Gets/Sets highlighted line number.
 		/// </summary>
 		public int HighlightedLine {
-			get { return this.currentLineHighlighRenderer.Line; }
-			set { this.currentLineHighlighRenderer.Line = value; }
+			get => this.currentLineHighlighRenderer.Line;
+			set => this.currentLineHighlighRenderer.Line = value;
 		}
 
 		/// <summary>
 		/// Empty line selection width.
 		/// </summary>
-		public virtual double EmptyLineSelectionWidth {
-			get { return 1; }
-		}
+		public virtual double EmptyLineSelectionWidth => 1;
 	}
 }

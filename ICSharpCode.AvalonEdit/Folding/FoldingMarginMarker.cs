@@ -34,7 +34,7 @@ namespace ICSharpCode.AvalonEdit.Folding
 		bool isExpanded;
 
 		public bool IsExpanded {
-			get { return isExpanded; }
+			get => isExpanded;
 			set {
 				if (isExpanded != value) {
 					isExpanded = value;

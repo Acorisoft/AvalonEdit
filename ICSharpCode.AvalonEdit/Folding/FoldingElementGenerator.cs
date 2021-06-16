@@ -41,9 +41,7 @@ namespace ICSharpCode.AvalonEdit.Folding
 		/// Gets/Sets the folding manager from which the foldings should be shown.
 		/// </summary>
 		public FoldingManager FoldingManager {
-			get {
-				return foldingManager;
-			}
+			get => foldingManager;
 			set {
 				if (foldingManager != value) {
 					if (foldingManager != null) {
@@ -203,8 +201,8 @@ namespace ICSharpCode.AvalonEdit.Folding
 		/// Gets/sets the brush used for folding element text.
 		/// </summary>
 		public static Brush TextBrush {
-			get { return textBrush; }
-			set { textBrush = value; }
+			get => textBrush;
+			set => textBrush = value;
 		}
 	}
 }

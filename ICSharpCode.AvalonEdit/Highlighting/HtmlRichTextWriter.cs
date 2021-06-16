@@ -59,9 +59,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		}
 
 		/// <inheritdoc/>
-		public override Encoding Encoding {
-			get { return htmlWriter.Encoding; }
-		}
+		public override Encoding Encoding => htmlWriter.Encoding;
 
 		/// <inheritdoc/>
 		public override void Flush()

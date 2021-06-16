@@ -252,19 +252,13 @@ namespace ICSharpCode.AvalonEdit.Document
 		}
 
 		/// <inheritdoc/>
-		public ITextSourceVersion Version {
-			get { return version; }
-		}
+		public ITextSourceVersion Version => version;
 
 		/// <inheritdoc/>
-		public int TextLength {
-			get { return text.Length; }
-		}
+		public int TextLength => text.Length;
 
 		/// <inheritdoc/>
-		public string Text {
-			get { return text; }
-		}
+		public string Text => text;
 
 		/// <inheritdoc/>
 		public ITextSource CreateSnapshot()

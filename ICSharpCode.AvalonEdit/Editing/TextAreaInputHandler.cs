@@ -69,9 +69,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		readonly TextArea textArea;
 
 		/// <inheritdoc/>
-		public TextArea TextArea {
-			get { return textArea; }
-		}
+		public TextArea TextArea => textArea;
 
 		/// <summary>
 		/// Creates a new TextAreaInputHandler.
@@ -134,24 +132,18 @@ namespace ICSharpCode.AvalonEdit.Editing
 		}
 
 		/// <inheritdoc/>
-		public TextArea TextArea {
-			get { return textArea; }
-		}
+		public TextArea TextArea => textArea;
 
 		/// <summary>
 		/// Gets whether the input handler is currently attached to the text area.
 		/// </summary>
-		public bool IsAttached {
-			get { return isAttached; }
-		}
+		public bool IsAttached => isAttached;
 
 		#region CommandBindings / InputBindings
 		/// <summary>
 		/// Gets the command bindings of this input handler.
 		/// </summary>
-		public ICollection<CommandBinding> CommandBindings {
-			get { return commandBindings; }
-		}
+		public ICollection<CommandBinding> CommandBindings => commandBindings;
 
 		void CommandBinding_Added(CommandBinding commandBinding)
 		{
@@ -168,9 +160,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// <summary>
 		/// Gets the input bindings of this input handler.
 		/// </summary>
-		public ICollection<InputBinding> InputBindings {
-			get { return inputBindings; }
-		}
+		public ICollection<InputBinding> InputBindings => inputBindings;
 
 		void InputBinding_Added(InputBinding inputBinding)
 		{
@@ -203,9 +193,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets the collection of nested input handlers. NestedInputHandlers are activated and deactivated
 		/// together with this input handler.
 		/// </summary>
-		public ICollection<ITextAreaInputHandler> NestedInputHandlers {
-			get { return nestedInputHandlers; }
-		}
+		public ICollection<ITextAreaInputHandler> NestedInputHandlers => nestedInputHandlers;
 
 		void NestedInputHandler_Added(ITextAreaInputHandler handler)
 		{

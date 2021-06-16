@@ -36,17 +36,11 @@ namespace ICSharpCode.AvalonEdit.Editing
 			return this;
 		}
 
-		public override TextViewPosition StartPosition {
-			get { return new TextViewPosition(TextLocation.Empty); }
-		}
+		public override TextViewPosition StartPosition => new TextViewPosition(TextLocation.Empty);
 
-		public override TextViewPosition EndPosition {
-			get { return new TextViewPosition(TextLocation.Empty); }
-		}
+		public override TextViewPosition EndPosition => new TextViewPosition(TextLocation.Empty);
 
-		public override ISegment SurroundingSegment {
-			get { return null; }
-		}
+		public override ISegment SurroundingSegment => null;
 
 		public override Selection SetEndpoint(TextViewPosition endPosition)
 		{
@@ -61,9 +55,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 			return Create(textArea, startPosition, endPosition);
 		}
 
-		public override IEnumerable<SelectionSegment> Segments {
-			get { return Empty<SelectionSegment>.Array; }
-		}
+		public override IEnumerable<SelectionSegment> Segments => Empty<SelectionSegment>.Array;
 
 		public override string GetText()
 		{
@@ -83,9 +75,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 			textArea.Caret.VisualColumn = -1;
 		}
 
-		public override int Length {
-			get { return 0; }
-		}
+		public override int Length => 0;
 
 		// Use reference equality because there's only one EmptySelection per text area.
 		public override int GetHashCode()

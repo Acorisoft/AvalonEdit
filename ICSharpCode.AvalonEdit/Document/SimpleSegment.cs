@@ -48,19 +48,11 @@ namespace ICSharpCode.AvalonEdit.Document
 
 		public readonly int Offset, Length;
 
-		int ISegment.Offset {
-			get { return Offset; }
-		}
+		int ISegment.Offset => Offset;
 
-		int ISegment.Length {
-			get { return Length; }
-		}
+		int ISegment.Length => Length;
 
-		public int EndOffset {
-			get {
-				return Offset + Length;
-			}
-		}
+		public int EndOffset => Offset + Length;
 
 		public SimpleSegment(int offset, int length)
 		{
@@ -125,25 +117,17 @@ namespace ICSharpCode.AvalonEdit.Document
 		readonly TextAnchor start, end;
 
 		/// <inheritdoc/>
-		public int Offset {
-			get { return start.Offset; }
-		}
+		public int Offset => start.Offset;
 
 		/// <inheritdoc/>
-		public int Length {
-			get {
-				// Math.Max takes care of the fact that end.Offset might move before start.Offset.
-				return Math.Max(0, end.Offset - start.Offset);
-			}
-		}
+		public int Length =>
+			// Math.Max takes care of the fact that end.Offset might move before start.Offset.
+			Math.Max(0, end.Offset - start.Offset);
 
 		/// <inheritdoc/>
-		public int EndOffset {
-			get {
-				// Math.Max takes care of the fact that end.Offset might move before start.Offset.
-				return Math.Max(start.Offset, end.Offset);
-			}
-		}
+		public int EndOffset =>
+			// Math.Max takes care of the fact that end.Offset might move before start.Offset.
+			Math.Max(start.Offset, end.Offset);
 
 		/// <summary>
 		/// Creates a new AnchorSegment using the specified anchors.

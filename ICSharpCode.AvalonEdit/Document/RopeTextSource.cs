@@ -66,14 +66,10 @@ namespace ICSharpCode.AvalonEdit.Document
 		}
 
 		/// <inheritdoc/>
-		public string Text {
-			get { return rope.ToString(); }
-		}
+		public string Text => rope.ToString();
 
 		/// <inheritdoc/>
-		public int TextLength {
-			get { return rope.Length; }
-		}
+		public int TextLength => rope.Length;
 
 		/// <inheritdoc/>
 		public char GetCharAt(int offset)
@@ -136,9 +132,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		}
 
 		/// <inheritdoc/>
-		public ITextSourceVersion Version {
-			get { return version; }
-		}
+		public ITextSourceVersion Version => version;
 
 		/// <inheritdoc/>
 		public int IndexOf(string searchText, int startIndex, int count, StringComparison comparisonType)

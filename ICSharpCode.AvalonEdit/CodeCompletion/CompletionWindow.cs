@@ -38,9 +38,7 @@ namespace ICSharpCode.AvalonEdit.CodeCompletion
 		/// <summary>
 		/// Gets the completion list used in this completion window.
 		/// </summary>
-		public CompletionList CompletionList {
-			get { return completionList; }
-		}
+		public CompletionList CompletionList => completionList;
 
 		/// <summary>
 		/// Creates a new code completion window.
@@ -173,9 +171,7 @@ namespace ICSharpCode.AvalonEdit.CodeCompletion
 		public bool CloseAutomatically { get; set; }
 
 		/// <inheritdoc/>
-		protected override bool CloseOnFocusLost {
-			get { return this.CloseAutomatically; }
-		}
+		protected override bool CloseOnFocusLost => this.CloseAutomatically;
 
 		/// <summary>
 		/// When this flag is set, code completion closes if the caret moves to the

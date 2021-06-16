@@ -226,11 +226,8 @@ namespace ICSharpCode.AvalonEdit.Document
 		#endregion
 
 		#region LineCount
-		public int LineCount {
-			get {
-				return root.nodeTotalCount;
-			}
-		}
+		public int LineCount => root.nodeTotalCount;
+
 		#endregion
 
 		#region CheckProperties
@@ -624,9 +621,7 @@ namespace ICSharpCode.AvalonEdit.Document
 				document.VerifyAccess();
 				return GetByNumber(1 + index);
 			}
-			set {
-				throw new NotSupportedException();
-			}
+			set => throw new NotSupportedException();
 		}
 
 		int ICollection<DocumentLine>.Count {
@@ -636,9 +631,7 @@ namespace ICSharpCode.AvalonEdit.Document
 			}
 		}
 
-		bool ICollection<DocumentLine>.IsReadOnly {
-			get { return true; }
-		}
+		bool ICollection<DocumentLine>.IsReadOnly => true;
 
 		int IList<DocumentLine>.IndexOf(DocumentLine item)
 		{

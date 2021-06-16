@@ -66,9 +66,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 			InvalidateArrange();
 		}
 
-		protected override int VisualChildrenCount {
-			get { return visuals.Count; }
-		}
+		protected override int VisualChildrenCount => visuals.Count;
 
 		protected override Visual GetVisualChild(int index)
 		{

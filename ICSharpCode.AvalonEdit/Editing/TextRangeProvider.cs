@@ -49,11 +49,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 			this.segment = new AnchorSegment(doc, offset, length);
 		}
 
-		string ID {
-			get {
-				return string.Format("({0}: {1})", GetHashCode().ToString("x8"), segment);
-			}
-		}
+		string ID => string.Format("({0}: {1})", GetHashCode().ToString("x8"), segment);
 
 		[Conditional("DEBUG")]
 		static void Log(string format, params object[] args)

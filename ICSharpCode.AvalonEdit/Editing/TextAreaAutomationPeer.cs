@@ -42,29 +42,23 @@ namespace ICSharpCode.AvalonEdit.Editing
 			RaiseAutomationEvent(AutomationEvents.TextPatternOnTextSelectionChanged);
 		}
 
-		private TextArea TextArea { get { return (TextArea)base.Owner; } }
+		private TextArea TextArea => (TextArea)base.Owner;
 
 		protected override AutomationControlType GetAutomationControlTypeCore()
 		{
 			return AutomationControlType.Document;
 		}
 
-		internal IRawElementProviderSimple Provider {
-			get { return ProviderFromPeer(this); }
-		}
+		internal IRawElementProviderSimple Provider => ProviderFromPeer(this);
 
-		public bool IsReadOnly {
-			get { return TextArea.ReadOnlySectionProvider == ReadOnlySectionDocument.Instance; }
-		}
+		public bool IsReadOnly => TextArea.ReadOnlySectionProvider == ReadOnlySectionDocument.Instance;
 
 		public void SetValue(string value)
 		{
 			TextArea.Document.Text = value;
 		}
 
-		public string Value {
-			get { return TextArea.Document.Text; }
-		}
+		public string Value => TextArea.Document.Text;
 
 		public ITextRangeProvider DocumentRange {
 			get {
@@ -102,9 +96,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 			throw new NotImplementedException();
 		}
 
-		public SupportedTextSelection SupportedTextSelection {
-			get { return SupportedTextSelection.Single; }
-		}
+		public SupportedTextSelection SupportedTextSelection => SupportedTextSelection.Single;
 
 		public override object GetPattern(PatternInterface patternInterface)
 		{

@@ -84,16 +84,12 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// <summary>
 		/// Gets the text.
 		/// </summary>
-		public string Text {
-			get { return text; }
-		}
+		public string Text => text;
 
 		/// <summary>
 		/// Gets the text length.
 		/// </summary>
-		public int Length {
-			get { return text.Length; }
-		}
+		public int Length => text.Length;
 
 		int GetIndexForOffset(int offset)
 		{

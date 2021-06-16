@@ -179,9 +179,7 @@ namespace ICSharpCode.AvalonEdit.Folding
 		/// The foldings are returned sorted by start offset;
 		/// for multiple foldings at the same offset the order is undefined.
 		/// </summary>
-		public IEnumerable<FoldingSection> AllFoldings {
-			get { return foldings; }
-		}
+		public IEnumerable<FoldingSection> AllFoldings => foldings;
 
 		/// <summary>
 		/// Gets the first offset greater or equal to <paramref name="startOffset"/> where a folded folding starts.

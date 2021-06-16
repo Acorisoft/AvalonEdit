@@ -53,25 +53,17 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// <summary>
 		/// Gets the line number.
 		/// </summary>
-		public int Line {
-			get { return line; }
-		}
+		public int Line => line;
 
 		/// <summary>
 		/// Gets the column number.
 		/// </summary>
-		public int Column {
-			get { return column; }
-		}
+		public int Column => column;
 
 		/// <summary>
 		/// Gets whether the TextLocation instance is empty.
 		/// </summary>
-		public bool IsEmpty {
-			get {
-				return column <= 0 && line <= 0;
-			}
-		}
+		public bool IsEmpty => column <= 0 && line <= 0;
 
 		/// <summary>
 		/// Gets a string representation for debugging purposes.

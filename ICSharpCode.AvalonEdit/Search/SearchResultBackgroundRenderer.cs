@@ -29,16 +29,11 @@ namespace ICSharpCode.AvalonEdit.Search
 	{
 		TextSegmentCollection<SearchResult> currentResults = new TextSegmentCollection<SearchResult>();
 
-		public TextSegmentCollection<SearchResult> CurrentResults {
-			get { return currentResults; }
-		}
+		public TextSegmentCollection<SearchResult> CurrentResults => currentResults;
 
-		public KnownLayer Layer {
-			get {
-				// draw behind selection
-				return KnownLayer.Selection;
-			}
-		}
+		public KnownLayer Layer =>
+			// draw behind selection
+			KnownLayer.Selection;
 
 		public SearchResultBackgroundRenderer()
 		{
@@ -50,7 +45,7 @@ namespace ICSharpCode.AvalonEdit.Search
 		Pen markerPen;
 
 		public Brush MarkerBrush {
-			get { return markerBrush; }
+			get => markerBrush;
 			set {
 				this.markerBrush = value;
 				markerPen = new Pen(markerBrush, 1);

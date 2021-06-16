@@ -87,7 +87,7 @@ namespace ICSharpCode.AvalonEdit
 		/// <remarks>The default value is <c>false</c>.</remarks>
 		[DefaultValue(false)]
 		public virtual bool ShowSpaces {
-			get { return showSpaces; }
+			get => showSpaces;
 			set {
 				if (showSpaces != value) {
 					showSpaces = value;
@@ -104,7 +104,7 @@ namespace ICSharpCode.AvalonEdit
 		/// <remarks>The default value is <c>false</c>.</remarks>
 		[DefaultValue(false)]
 		public virtual bool ShowTabs {
-			get { return showTabs; }
+			get => showTabs;
 			set {
 				if (showTabs != value) {
 					showTabs = value;
@@ -121,7 +121,7 @@ namespace ICSharpCode.AvalonEdit
 		/// <remarks>The default value is <c>false</c>.</remarks>
 		[DefaultValue(false)]
 		public virtual bool ShowEndOfLine {
-			get { return showEndOfLine; }
+			get => showEndOfLine;
 			set {
 				if (showEndOfLine != value) {
 					showEndOfLine = value;
@@ -138,7 +138,7 @@ namespace ICSharpCode.AvalonEdit
 		/// <remarks>The default value is <c>true</c>.</remarks>
 		[DefaultValue(true)]
 		public virtual bool ShowBoxForControlCharacters {
-			get { return showBoxForControlCharacters; }
+			get => showBoxForControlCharacters;
 			set {
 				if (showBoxForControlCharacters != value) {
 					showBoxForControlCharacters = value;
@@ -157,7 +157,7 @@ namespace ICSharpCode.AvalonEdit
 		/// <remarks>The default value is <c>true</c>.</remarks>
 		[DefaultValue(true)]
 		public virtual bool EnableHyperlinks {
-			get { return enableHyperlinks; }
+			get => enableHyperlinks;
 			set {
 				if (enableHyperlinks != value) {
 					enableHyperlinks = value;
@@ -174,7 +174,7 @@ namespace ICSharpCode.AvalonEdit
 		/// <remarks>The default value is <c>true</c>.</remarks>
 		[DefaultValue(true)]
 		public virtual bool EnableEmailHyperlinks {
-			get { return enableEmailHyperlinks; }
+			get => enableEmailHyperlinks;
 			set {
 				if (enableEmailHyperlinks != value) {
 					enableEmailHyperlinks = value;
@@ -192,7 +192,7 @@ namespace ICSharpCode.AvalonEdit
 		/// <remarks>The default value is <c>true</c>.</remarks>
 		[DefaultValue(true)]
 		public virtual bool RequireControlModifierForHyperlinkClick {
-			get { return requireControlModifierForHyperlinkClick; }
+			get => requireControlModifierForHyperlinkClick;
 			set {
 				if (requireControlModifierForHyperlinkClick != value) {
 					requireControlModifierForHyperlinkClick = value;
@@ -216,7 +216,7 @@ namespace ICSharpCode.AvalonEdit
 		/// <remarks>The default value is 4.</remarks>
 		[DefaultValue(4)]
 		public virtual int IndentationSize {
-			get { return indentationSize; }
+			get => indentationSize;
 			set {
 				if (value < 1)
 					throw new ArgumentOutOfRangeException("value", value, "value must be positive");
@@ -240,7 +240,7 @@ namespace ICSharpCode.AvalonEdit
 		/// <remarks>The default value is <c>false</c>.</remarks>
 		[DefaultValue(false)]
 		public virtual bool ConvertTabsToSpaces {
-			get { return convertTabsToSpaces; }
+			get => convertTabsToSpaces;
 			set {
 				if (convertTabsToSpaces != value) {
 					convertTabsToSpaces = value;
@@ -255,9 +255,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1721:PropertyNamesShouldNotMatchGetMethods")]
 		[Browsable(false)]
-		public string IndentationString {
-			get { return GetIndentationString(1); }
-		}
+		public string IndentationString => GetIndentationString(1);
 
 		/// <summary>
 		/// Gets text required to indent from the specified <paramref name="column"/> to the next indentation level.
@@ -282,7 +280,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(true)]
 		public virtual bool CutCopyWholeLine {
-			get { return cutCopyWholeLine; }
+			get => cutCopyWholeLine;
 			set {
 				if (cutCopyWholeLine != value) {
 					cutCopyWholeLine = value;
@@ -299,7 +297,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(false)]
 		public virtual bool AllowScrollBelowDocument {
-			get { return allowScrollBelowDocument; }
+			get => allowScrollBelowDocument;
 			set {
 				if (allowScrollBelowDocument != value) {
 					allowScrollBelowDocument = value;
@@ -316,7 +314,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(0.0)]
 		public virtual double WordWrapIndentation {
-			get { return wordWrapIndentation; }
+			get => wordWrapIndentation;
 			set {
 				if (double.IsNaN(value) || double.IsInfinity(value))
 					throw new ArgumentOutOfRangeException("value", value, "value must not be NaN/infinity");
@@ -336,7 +334,7 @@ namespace ICSharpCode.AvalonEdit
 		/// <remarks>When combined with <see cref="WordWrapIndentation"/>, the inherited indentation is added to the word wrap indentation.</remarks>
 		[DefaultValue(true)]
 		public virtual bool InheritWordWrapIndentation {
-			get { return inheritWordWrapIndentation; }
+			get => inheritWordWrapIndentation;
 			set {
 				if (value != inheritWordWrapIndentation) {
 					inheritWordWrapIndentation = value;
@@ -352,7 +350,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(true)]
 		public bool EnableRectangularSelection {
-			get { return enableRectangularSelection; }
+			get => enableRectangularSelection;
 			set {
 				if (enableRectangularSelection != value) {
 					enableRectangularSelection = value;
@@ -368,7 +366,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(true)]
 		public bool EnableTextDragDrop {
-			get { return enableTextDragDrop; }
+			get => enableTextDragDrop;
 			set {
 				if (enableTextDragDrop != value) {
 					enableTextDragDrop = value;
@@ -387,7 +385,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(false)]
 		public virtual bool EnableVirtualSpace {
-			get { return enableVirtualSpace; }
+			get => enableVirtualSpace;
 			set {
 				if (enableVirtualSpace != value) {
 					enableVirtualSpace = value;
@@ -404,7 +402,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(true)]
 		public virtual bool EnableImeSupport {
-			get { return enableImeSupport; }
+			get => enableImeSupport;
 			set {
 				if (enableImeSupport != value) {
 					enableImeSupport = value;
@@ -420,7 +418,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(false)]
 		public virtual bool ShowColumnRuler {
-			get { return showColumnRuler; }
+			get => showColumnRuler;
 			set {
 				if (showColumnRuler != value) {
 					showColumnRuler = value;
@@ -436,7 +434,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(80)]
 		public virtual int ColumnRulerPosition {
-			get { return columnRulerPosition; }
+			get => columnRulerPosition;
 			set {
 				if (columnRulerPosition != value) {
 					columnRulerPosition = value;
@@ -452,7 +450,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(false)]
 		public virtual bool HighlightCurrentLine {
-			get { return highlightCurrentLine; }
+			get => highlightCurrentLine;
 			set {
 				if (highlightCurrentLine != value) {
 					highlightCurrentLine = value;
@@ -468,7 +466,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(true)]
 		public bool HideCursorWhileTyping {
-			get { return hideCursorWhileTyping; }
+			get => hideCursorWhileTyping;
 			set {
 				if (hideCursorWhileTyping != value) {
 					hideCursorWhileTyping = value;
@@ -484,7 +482,7 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DefaultValue(false)]
 		public bool AllowToggleOverstrikeMode {
-			get { return allowToggleOverstrikeMode; }
+			get => allowToggleOverstrikeMode;
 			set {
 				if (allowToggleOverstrikeMode != value) {
 					allowToggleOverstrikeMode = value;

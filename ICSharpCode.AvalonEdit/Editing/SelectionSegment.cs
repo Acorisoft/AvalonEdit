@@ -61,40 +61,28 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// <summary>
 		/// Gets the start offset.
 		/// </summary>
-		public int StartOffset {
-			get { return startOffset; }
-		}
+		public int StartOffset => startOffset;
 
 		/// <summary>
 		/// Gets the end offset.
 		/// </summary>
-		public int EndOffset {
-			get { return endOffset; }
-		}
+		public int EndOffset => endOffset;
 
 		/// <summary>
 		/// Gets the start visual column.
 		/// </summary>
-		public int StartVisualColumn {
-			get { return startVC; }
-		}
+		public int StartVisualColumn => startVC;
 
 		/// <summary>
 		/// Gets the end visual column.
 		/// </summary>
-		public int EndVisualColumn {
-			get { return endVC; }
-		}
+		public int EndVisualColumn => endVC;
 
 		/// <inheritdoc/>
-		int ISegment.Offset {
-			get { return startOffset; }
-		}
+		int ISegment.Offset => startOffset;
 
 		/// <inheritdoc/>
-		public int Length {
-			get { return endOffset - startOffset; }
-		}
+		public int Length => endOffset - startOffset;
 
 		/// <inheritdoc/>
 		public override string ToString()

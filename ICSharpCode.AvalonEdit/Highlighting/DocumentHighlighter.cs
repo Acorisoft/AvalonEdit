@@ -52,9 +52,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// <summary>
 		/// Gets the document that this DocumentHighlighter is highlighting.
 		/// </summary>
-		public IDocument Document {
-			get { return document; }
-		}
+		public IDocument Document => document;
 
 		/// <summary>
 		/// Creates a new DocumentHighlighter instance.
@@ -131,7 +129,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// Gets/sets the the initial span stack of the document. Default value is <see cref="SpanStack.Empty" />.
 		/// </summary>
 		public ImmutableStack<HighlightingSpan> InitialSpanStack {
-			get { return initialSpanStack; }
+			get => initialSpanStack;
 			set {
 				initialSpanStack = value ?? SpanStack.Empty;
 				InvalidateHighlighting();
@@ -312,9 +310,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		}
 
 		/// <inheritdoc/>
-		public HighlightingColor DefaultTextColor {
-			get { return null; }
-		}
+		public HighlightingColor DefaultTextColor => null;
 
 		/// <inheritdoc/>
 		public void BeginHighlighting()

@@ -32,9 +32,7 @@ namespace ICSharpCode.AvalonEdit.Utils
 		int size, head, tail;
 
 		/// <inheritdoc/>
-		public int Count {
-			get { return size; }
-		}
+		public int Count => size;
 
 		/// <inheritdoc/>
 		public void Clear()
@@ -147,9 +145,7 @@ namespace ICSharpCode.AvalonEdit.Utils
 			return this.GetEnumerator();
 		}
 
-		bool ICollection<T>.IsReadOnly {
-			get { return false; }
-		}
+		bool ICollection<T>.IsReadOnly => false;
 
 		void ICollection<T>.Add(T item)
 		{

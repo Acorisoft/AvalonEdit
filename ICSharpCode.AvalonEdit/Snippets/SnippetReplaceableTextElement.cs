@@ -160,9 +160,7 @@ namespace ICSharpCode.AvalonEdit.Snippets
 			return false;
 		}
 
-		public bool IsEditable {
-			get { return true; }
-		}
+		public bool IsEditable => true;
 
 		public ISegment Segment {
 			get {

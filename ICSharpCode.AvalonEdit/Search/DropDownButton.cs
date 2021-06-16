@@ -56,16 +56,16 @@ namespace ICSharpCode.AvalonEdit.Search
 		/// Gets/Sets the popup that is used as drop-down content.
 		/// </summary>
 		public Popup DropDownContent {
-			get { return (Popup)GetValue(DropDownContentProperty); }
-			set { SetValue(DropDownContentProperty, value); }
+			get => (Popup)GetValue(DropDownContentProperty);
+			set => SetValue(DropDownContentProperty, value);
 		}
 
 		/// <summary>
 		/// Gets whether the drop-down is opened.
 		/// </summary>
 		public bool IsDropDownContentOpen {
-			get { return (bool)GetValue(IsDropDownContentOpenProperty); }
-			protected set { SetValue(IsDropDownContentOpenPropertyKey, value); }
+			get => (bool)GetValue(IsDropDownContentOpenProperty);
+			protected set => SetValue(IsDropDownContentOpenPropertyKey, value);
 		}
 
 		/// <inheritdoc/>

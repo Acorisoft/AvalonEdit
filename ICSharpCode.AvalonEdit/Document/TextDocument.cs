@@ -243,8 +243,8 @@ namespace ICSharpCode.AvalonEdit.Document
 		public event EventHandler TextChanged;
 
 		event EventHandler IDocument.ChangeCompleted {
-			add { this.TextChanged += value; }
-			remove { this.TextChanged -= value; }
+			add => this.TextChanged += value;
+			remove => this.TextChanged -= value;
 		}
 
 		/// <inheritdoc/>
@@ -305,8 +305,8 @@ namespace ICSharpCode.AvalonEdit.Document
 		private event EventHandler<TextChangeEventArgs> textChanging;
 
 		event EventHandler<TextChangeEventArgs> IDocument.TextChanging {
-			add { textChanging += value; }
-			remove { textChanging -= value; }
+			add => textChanging += value;
+			remove => textChanging -= value;
 		}
 
 		/// <summary>
@@ -318,8 +318,8 @@ namespace ICSharpCode.AvalonEdit.Document
 		private event EventHandler<TextChangeEventArgs> textChanged;
 
 		event EventHandler<TextChangeEventArgs> IDocument.TextChanged {
-			add { textChanged += value; }
-			remove { textChanged -= value; }
+			add => textChanged += value;
+			remove => textChanged -= value;
 		}
 
 		/// <summary>
@@ -353,9 +353,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		}
 
 		/// <inheritdoc/>
-		public ITextSourceVersion Version {
-			get { return versionProvider.CurrentVersion; }
-		}
+		public ITextSourceVersion Version => versionProvider.CurrentVersion;
 
 		/// <inheritdoc/>
 		public System.IO.TextReader CreateReader()
@@ -880,9 +878,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// Gets a read-only list of lines.
 		/// </summary>
 		/// <remarks><inheritdoc cref="DocumentLine"/></remarks>
-		public IList<DocumentLine> Lines {
-			get { return lineTree; }
-		}
+		public IList<DocumentLine> Lines => lineTree;
 
 		/// <summary>
 		/// Gets a line by the line number: O(log n)
@@ -978,7 +974,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// </summary>
 		/// <remarks>This property can also be used to set the undo stack, e.g. for sharing a common undo stack between multiple documents.</remarks>
 		public UndoStack UndoStack {
-			get { return undoStack; }
+			get => undoStack;
 			set {
 				if (value == null)
 					throw new ArgumentNullException();
@@ -1110,7 +1106,7 @@ namespace ICSharpCode.AvalonEdit.Document
 
 		/// <inheritdoc/>
 		public string FileName {
-			get { return fileName; }
+			get => fileName;
 			set {
 				if (fileName != value) {
 					fileName = value;

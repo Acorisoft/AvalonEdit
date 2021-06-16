@@ -32,9 +32,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		internal double height;
 		internal List<CollapsedLineSection> collapsedSections;
 
-		internal bool IsDirectlyCollapsed {
-			get { return collapsedSections != null; }
-		}
+		internal bool IsDirectlyCollapsed => collapsedSections != null;
 
 		internal void AddDirectlyCollapsed(CollapsedLineSection section)
 		{
@@ -54,10 +52,6 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Returns 0 if the line is directly collapsed, otherwise, returns <see cref="height"/>.
 		/// </summary>
-		internal double TotalHeight {
-			get {
-				return IsDirectlyCollapsed ? 0 : height;
-			}
-		}
+		internal double TotalHeight => IsDirectlyCollapsed ? 0 : height;
 	}
 }

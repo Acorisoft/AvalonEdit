@@ -266,9 +266,7 @@ namespace ICSharpCode.AvalonEdit.CodeCompletion
 		/// <summary>
 		/// Gets whether the completion window should automatically close when the text editor looses focus.
 		/// </summary>
-		protected virtual bool CloseOnFocusLost {
-			get { return true; }
-		}
+		protected virtual bool CloseOnFocusLost => true;
 
 		bool IsTextAreaFocused {
 			get {

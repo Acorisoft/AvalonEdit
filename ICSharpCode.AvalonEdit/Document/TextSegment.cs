@@ -81,19 +81,13 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// </summary>
 		internal int distanceToMaxEnd;
 
-		int ISegment.Offset {
-			get { return StartOffset; }
-		}
+		int ISegment.Offset => StartOffset;
 
 		/// <summary>
 		/// Gets whether this segment is connected to a TextSegmentCollection and will automatically
 		/// update its offsets.
 		/// </summary>
-		protected bool IsConnectedToCollection {
-			get {
-				return ownerTree != null;
-			}
-		}
+		protected bool IsConnectedToCollection => ownerTree != null;
 
 		/// <summary>
 		/// Gets/Sets the start offset of the segment.
@@ -147,9 +141,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// Setting the end offset will change the length, the start offset will stay constant.
 		/// </remarks>
 		public int EndOffset {
-			get {
-				return StartOffset + Length;
-			}
+			get => StartOffset + Length;
 			set {
 				int newLength = value - StartOffset;
 				if (newLength < 0)
@@ -165,9 +157,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// Setting the length will change the end offset, the start offset will stay constant.
 		/// </remarks>
 		public int Length {
-			get {
-				return segmentLength;
-			}
+			get => segmentLength;
 			set {
 				if (value < 0)
 					throw new ArgumentOutOfRangeException("value", "Length must not be negative");

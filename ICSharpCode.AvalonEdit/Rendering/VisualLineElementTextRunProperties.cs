@@ -89,9 +89,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		}
 
 		/// <inheritdoc/>
-		public override Brush BackgroundBrush {
-			get { return backgroundBrush; }
-		}
+		public override Brush BackgroundBrush => backgroundBrush;
 
 		/// <summary>
 		/// Sets the <see cref="BackgroundBrush"/>.
@@ -103,9 +101,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		}
 
 		/// <inheritdoc/>
-		public override BaselineAlignment BaselineAlignment {
-			get { return baselineAlignment; }
-		}
+		public override BaselineAlignment BaselineAlignment => baselineAlignment;
 
 		/// <summary>
 		/// Sets the <see cref="BaselineAlignment"/>.
@@ -116,9 +112,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		}
 
 		/// <inheritdoc/>
-		public override CultureInfo CultureInfo {
-			get { return cultureInfo; }
-		}
+		public override CultureInfo CultureInfo => cultureInfo;
 
 		/// <summary>
 		/// Sets the <see cref="CultureInfo"/>.
@@ -131,9 +125,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		}
 
 		/// <inheritdoc/>
-		public override double FontHintingEmSize {
-			get { return fontHintingEmSize; }
-		}
+		public override double FontHintingEmSize => fontHintingEmSize;
 
 		/// <summary>
 		/// Sets the <see cref="FontHintingEmSize"/>.
@@ -144,9 +136,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		}
 
 		/// <inheritdoc/>
-		public override double FontRenderingEmSize {
-			get { return fontRenderingEmSize; }
-		}
+		public override double FontRenderingEmSize => fontRenderingEmSize;
 
 		/// <summary>
 		/// Sets the <see cref="FontRenderingEmSize"/>.
@@ -157,9 +147,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		}
 
 		/// <inheritdoc/>
-		public override Brush ForegroundBrush {
-			get { return foregroundBrush; }
-		}
+		public override Brush ForegroundBrush => foregroundBrush;
 
 		/// <summary>
 		/// Sets the <see cref="ForegroundBrush"/>.
@@ -171,9 +159,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		}
 
 		/// <inheritdoc/>
-		public override Typeface Typeface {
-			get { return typeface; }
-		}
+		public override Typeface Typeface => typeface;
 
 		/// <summary>
 		/// Sets the <see cref="Typeface"/>.
@@ -192,9 +178,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// collection instance is only used for this <see cref="TextRunProperties"/> instance and it is safe
 		/// to add <see cref="TextDecoration"/>s.
 		/// </summary>
-		public override TextDecorationCollection TextDecorations {
-			get { return textDecorations; }
-		}
+		public override TextDecorationCollection TextDecorations => textDecorations;
 
 		/// <summary>
 		/// Sets the <see cref="TextDecorations"/>.
@@ -215,9 +199,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// collection instance is only used for this <see cref="TextRunProperties"/> instance and it is safe
 		/// to add <see cref="TextEffect"/>s.
 		/// </summary>
-		public override TextEffectCollection TextEffects {
-			get { return textEffects; }
-		}
+		public override TextEffectCollection TextEffects => textEffects;
 
 		/// <summary>
 		/// Sets the <see cref="TextEffects"/>.
@@ -231,9 +213,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets the typography properties for the text run.
 		/// </summary>
-		public override TextRunTypographyProperties TypographyProperties {
-			get { return typographyProperties; }
-		}
+		public override TextRunTypographyProperties TypographyProperties => typographyProperties;
 
 		/// <summary>
 		/// Sets the <see cref="TypographyProperties"/>.
@@ -246,9 +226,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets the number substitution settings for the text run.
 		/// </summary>
-		public override NumberSubstitution NumberSubstitution {
-			get { return numberSubstitution; }
-		}
+		public override NumberSubstitution NumberSubstitution => numberSubstitution;
 
 		/// <summary>
 		/// Sets the <see cref="NumberSubstitution"/>.

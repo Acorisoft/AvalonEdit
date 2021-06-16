@@ -174,9 +174,7 @@ namespace ICSharpCode.AvalonEdit.Utils
 		/// <remarks>
 		/// This method counts as a read access and may be called concurrently to other read accesses.
 		/// </remarks>
-		public int Length {
-			get { return root.length; }
-		}
+		public int Length => root.length;
 
 		/// <summary>
 		/// Gets the length of the rope.
@@ -185,9 +183,7 @@ namespace ICSharpCode.AvalonEdit.Utils
 		/// <remarks>
 		/// This method counts as a read access and may be called concurrently to other read accesses.
 		/// </remarks>
-		public int Count {
-			get { return root.length; }
-		}
+		public int Count => root.length;
 
 		/// <summary>
 		/// Inserts another rope into this rope.
@@ -622,9 +618,7 @@ namespace ICSharpCode.AvalonEdit.Utils
 		}
 		#endregion
 
-		bool ICollection<T>.IsReadOnly {
-			get { return false; }
-		}
+		bool ICollection<T>.IsReadOnly => false;
 
 		/// <summary>
 		/// Finds the first occurance of item.

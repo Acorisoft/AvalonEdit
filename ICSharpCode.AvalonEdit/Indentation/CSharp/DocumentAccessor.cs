@@ -77,24 +77,16 @@ namespace ICSharpCode.AvalonEdit.Indentation.CSharp
 		DocumentLine line;
 
 		/// <inheritdoc/>
-		public bool IsReadOnly {
-			get {
-				return num < minLine;
-			}
-		}
+		public bool IsReadOnly => num < minLine;
 
 		/// <inheritdoc/>
-		public int LineNumber {
-			get {
-				return num;
-			}
-		}
+		public int LineNumber => num;
 
 		bool lineDirty;
 
 		/// <inheritdoc/>
 		public string Text {
-			get { return text; }
+			get => text;
 			set {
 				if (num < minLine) return;
 				text = value;

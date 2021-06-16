@@ -37,7 +37,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		#region Properties
 
 		public int Line {
-			get { return this.line; }
+			get => this.line;
 			set {
 				if (this.line != value) {
 					this.line = value;
@@ -46,9 +46,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 			}
 		}
 
-		public KnownLayer Layer {
-			get { return KnownLayer.Selection; }
-		}
+		public KnownLayer Layer => KnownLayer.Selection;
 
 		public Brush BackgroundBrush {
 			get; set;

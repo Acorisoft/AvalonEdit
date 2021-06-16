@@ -297,20 +297,13 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// <summary>
 		/// Returns the first segment in the collection or null, if the collection is empty.
 		/// </summary>
-		public T FirstSegment {
-			get {
-				return root == null ? null : (T)root.LeftMost;
-			}
-		}
+		public T FirstSegment => root == null ? null : (T)root.LeftMost;
 
 		/// <summary>
 		/// Returns the last segment in the collection or null, if the collection is empty.
 		/// </summary>
-		public T LastSegment {
-			get {
-				return root == null ? null : (T)root.RightMost;
-			}
-		}
+		public T LastSegment => root == null ? null : (T)root.RightMost;
+
 		#endregion
 
 		#region FindFirstSegmentWithStartAfter
@@ -925,13 +918,9 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// <summary>
 		/// Gets the number of segments in the tree.
 		/// </summary>
-		public int Count {
-			get { return count; }
-		}
+		public int Count => count;
 
-		bool ICollection<T>.IsReadOnly {
-			get { return false; }
-		}
+		bool ICollection<T>.IsReadOnly => false;
 
 		/// <summary>
 		/// Gets whether this tree contains the specified item.

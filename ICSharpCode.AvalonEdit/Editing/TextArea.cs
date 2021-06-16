@@ -110,7 +110,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// </summary>
 		/// <remarks><inheritdoc cref="ITextAreaInputHandler"/></remarks>
 		public ITextAreaInputHandler ActiveInputHandler {
-			get { return activeInputHandler; }
+			get => activeInputHandler;
 			set {
 				if (value != null && value.TextArea != this)
 					throw new ArgumentException("The input handler was created for a different text area than this one.");
@@ -148,9 +148,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets the list of currently active stacked input handlers.
 		/// </summary>
 		/// <remarks><inheritdoc cref="ITextAreaInputHandler"/></remarks>
-		public ImmutableStack<TextAreaStackedInputHandler> StackedInputHandlers {
-			get { return stackedInputHandlers; }
-		}
+		public ImmutableStack<TextAreaStackedInputHandler> StackedInputHandlers => stackedInputHandlers;
 
 		/// <summary>
 		/// Pushes an input handler onto the list of stacked input handlers.
@@ -194,8 +192,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets/Sets the document displayed by the text editor.
 		/// </summary>
 		public TextDocument Document {
-			get { return (TextDocument)GetValue(DocumentProperty); }
-			set { SetValue(DocumentProperty, value); }
+			get => (TextDocument)GetValue(DocumentProperty);
+			set => SetValue(DocumentProperty, value);
 		}
 
 		/// <inheritdoc/>
@@ -242,8 +240,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets/Sets the document displayed by the text editor.
 		/// </summary>
 		public TextEditorOptions Options {
-			get { return (TextEditorOptions)GetValue(OptionsProperty); }
-			set { SetValue(OptionsProperty, value); }
+			get => (TextEditorOptions)GetValue(OptionsProperty);
+			set => SetValue(OptionsProperty, value);
 		}
 
 		/// <summary>
@@ -370,11 +368,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// <summary>
 		/// Gets the text view used to display text in this text area.
 		/// </summary>
-		public TextView TextView {
-			get {
-				return textView;
-			}
-		}
+		public TextView TextView => textView;
+
 		/// <inheritdoc/>
 		public override void OnApplyTemplate()
 		{
@@ -397,7 +392,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets/Sets the selection in this text area.
 		/// </summary>
 		public Selection Selection {
-			get { return selection; }
+			get => selection;
 			set {
 				if (value == null)
 					throw new ArgumentNullException("value");
@@ -457,8 +452,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets/Sets the background brush used for the selection.
 		/// </summary>
 		public Brush SelectionBrush {
-			get { return (Brush)GetValue(SelectionBrushProperty); }
-			set { SetValue(SelectionBrushProperty, value); }
+			get => (Brush)GetValue(SelectionBrushProperty);
+			set => SetValue(SelectionBrushProperty, value);
 		}
 
 		/// <summary>
@@ -471,8 +466,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets/Sets the foreground brush used for selected text.
 		/// </summary>
 		public Brush SelectionForeground {
-			get { return (Brush)GetValue(SelectionForegroundProperty); }
-			set { SetValue(SelectionForegroundProperty, value); }
+			get => (Brush)GetValue(SelectionForegroundProperty);
+			set => SetValue(SelectionForegroundProperty, value);
 		}
 
 		/// <summary>
@@ -485,8 +480,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets/Sets the pen used for the border of the selection.
 		/// </summary>
 		public Pen SelectionBorder {
-			get { return (Pen)GetValue(SelectionBorderProperty); }
-			set { SetValue(SelectionBorderProperty, value); }
+			get => (Pen)GetValue(SelectionBorderProperty);
+			set => SetValue(SelectionBorderProperty, value);
 		}
 
 		/// <summary>
@@ -500,8 +495,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets/Sets the corner radius of the selection.
 		/// </summary>
 		public double SelectionCornerRadius {
-			get { return (double)GetValue(SelectionCornerRadiusProperty); }
-			set { SetValue(SelectionCornerRadiusProperty, value); }
+			get => (double)GetValue(SelectionCornerRadiusProperty);
+			set => SetValue(SelectionCornerRadiusProperty, value);
 		}
 
 		/// <summary>
@@ -600,9 +595,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// <summary>
 		/// Gets the Caret used for this text area.
 		/// </summary>
-		public Caret Caret {
-			get { return caret; }
-		}
+		public Caret Caret => caret;
 
 		void CaretPositionChanged(object sender, EventArgs e)
 		{
@@ -617,11 +610,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// <summary>
 		/// Gets the collection of margins displayed to the left of the text view.
 		/// </summary>
-		public ObservableCollection<UIElement> LeftMargins {
-			get {
-				return leftMargins;
-			}
-		}
+		public ObservableCollection<UIElement> LeftMargins => leftMargins;
 
 		void leftMargins_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
 		{
@@ -643,7 +632,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets/Sets an object that provides read-only sections for the text area.
 		/// </summary>
 		public IReadOnlySectionProvider ReadOnlySectionProvider {
-			get { return readOnlySectionProvider; }
+			get => readOnlySectionProvider;
 			set {
 				if (value == null)
 					throw new ArgumentNullException("value");
@@ -668,7 +657,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		}
 
 		bool IScrollInfo.CanVerticallyScroll {
-			get { return scrollInfo != null ? scrollInfo.CanVerticallyScroll : false; }
+			get => scrollInfo != null ? scrollInfo.CanVerticallyScroll : false;
 			set {
 				canVerticallyScroll = value;
 				if (scrollInfo != null)
@@ -677,7 +666,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		}
 
 		bool IScrollInfo.CanHorizontallyScroll {
-			get { return scrollInfo != null ? scrollInfo.CanHorizontallyScroll : false; }
+			get => scrollInfo != null ? scrollInfo.CanHorizontallyScroll : false;
 			set {
 				canHorizontallyScroll = value;
 				if (scrollInfo != null)
@@ -685,32 +674,20 @@ namespace ICSharpCode.AvalonEdit.Editing
 			}
 		}
 
-		double IScrollInfo.ExtentWidth {
-			get { return scrollInfo != null ? scrollInfo.ExtentWidth : 0; }
-		}
+		double IScrollInfo.ExtentWidth => scrollInfo != null ? scrollInfo.ExtentWidth : 0;
 
-		double IScrollInfo.ExtentHeight {
-			get { return scrollInfo != null ? scrollInfo.ExtentHeight : 0; }
-		}
+		double IScrollInfo.ExtentHeight => scrollInfo != null ? scrollInfo.ExtentHeight : 0;
 
-		double IScrollInfo.ViewportWidth {
-			get { return scrollInfo != null ? scrollInfo.ViewportWidth : 0; }
-		}
+		double IScrollInfo.ViewportWidth => scrollInfo != null ? scrollInfo.ViewportWidth : 0;
 
-		double IScrollInfo.ViewportHeight {
-			get { return scrollInfo != null ? scrollInfo.ViewportHeight : 0; }
-		}
+		double IScrollInfo.ViewportHeight => scrollInfo != null ? scrollInfo.ViewportHeight : 0;
 
-		double IScrollInfo.HorizontalOffset {
-			get { return scrollInfo != null ? scrollInfo.HorizontalOffset : 0; }
-		}
+		double IScrollInfo.HorizontalOffset => scrollInfo != null ? scrollInfo.HorizontalOffset : 0;
 
-		double IScrollInfo.VerticalOffset {
-			get { return scrollInfo != null ? scrollInfo.VerticalOffset : 0; }
-		}
+		double IScrollInfo.VerticalOffset => scrollInfo != null ? scrollInfo.VerticalOffset : 0;
 
 		ScrollViewer IScrollInfo.ScrollOwner {
-			get { return scrollInfo != null ? scrollInfo.ScrollOwner : null; }
+			get => scrollInfo != null ? scrollInfo.ScrollOwner : null;
 			set {
 				if (scrollInfo != null)
 					scrollInfo.ScrollOwner = value;
@@ -989,8 +966,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets/Sets the indentation strategy used when inserting new lines.
 		/// </summary>
 		public IIndentationStrategy IndentationStrategy {
-			get { return (IIndentationStrategy)GetValue(IndentationStrategyProperty); }
-			set { SetValue(IndentationStrategyProperty, value); }
+			get => (IIndentationStrategy)GetValue(IndentationStrategyProperty);
+			set => SetValue(IndentationStrategyProperty, value);
 		}
 		#endregion
 
@@ -1079,8 +1056,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets/Sets whether overstrike mode is active.
 		/// </summary>
 		public bool OverstrikeMode {
-			get { return (bool)GetValue(OverstrikeModeProperty); }
-			set { SetValue(OverstrikeModeProperty, value); }
+			get => (bool)GetValue(OverstrikeModeProperty);
+			set => SetValue(OverstrikeModeProperty, value);
 		}
 
 		#endregion
@@ -1144,11 +1121,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// <summary>
 		/// Gets the text.
 		/// </summary>
-		public string Text {
-			get {
-				return text;
-			}
-		}
+		public string Text => text;
 
 		/// <summary>
 		/// Creates a new TextEventArgs instance.

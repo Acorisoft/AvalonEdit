@@ -46,9 +46,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 			this.textView.BackgroundRenderers.Add(this);
 		}
 
-		public KnownLayer Layer {
-			get { return KnownLayer.Background; }
-		}
+		public KnownLayer Layer => KnownLayer.Background;
 
 		public void SetRuler(int column, Pen pen)
 		{

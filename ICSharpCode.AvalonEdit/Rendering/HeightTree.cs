@@ -73,16 +73,12 @@ namespace ICSharpCode.AvalonEdit.Rendering
 			this.weakLineTracker = null;
 		}
 
-		public bool IsDisposed {
-			get {
-				return root == null;
-			}
-		}
+		public bool IsDisposed => root == null;
 
 		double defaultLineHeight;
 
 		public double DefaultLineHeight {
-			get { return defaultLineHeight; }
+			get => defaultLineHeight;
 			set {
 				double oldValue = defaultLineHeight;
 				if (oldValue == value)
@@ -558,17 +554,10 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		#endregion
 
 		#region LineCount & TotalHeight
-		public int LineCount {
-			get {
-				return root.totalCount;
-			}
-		}
+		public int LineCount => root.totalCount;
 
-		public double TotalHeight {
-			get {
-				return root.totalHeight;
-			}
-		}
+		public double TotalHeight => root.totalHeight;
+
 		#endregion
 
 		#region GetAllCollapsedSections

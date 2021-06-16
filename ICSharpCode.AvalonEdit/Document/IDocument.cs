@@ -250,37 +250,27 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// <summary>
 		/// The offset at which the change occurs.
 		/// </summary>
-		public int Offset {
-			get { return offset; }
-		}
+		public int Offset => offset;
 
 		/// <summary>
 		/// The text that was removed.
 		/// </summary>
-		public ITextSource RemovedText {
-			get { return removedText; }
-		}
+		public ITextSource RemovedText => removedText;
 
 		/// <summary>
 		/// The number of characters removed.
 		/// </summary>
-		public int RemovalLength {
-			get { return removedText.TextLength; }
-		}
+		public int RemovalLength => removedText.TextLength;
 
 		/// <summary>
 		/// The text that was inserted.
 		/// </summary>
-		public ITextSource InsertedText {
-			get { return insertedText; }
-		}
+		public ITextSource InsertedText => insertedText;
 
 		/// <summary>
 		/// The number of characters inserted.
 		/// </summary>
-		public int InsertionLength {
-			get { return insertedText.TextLength; }
-		}
+		public int InsertionLength => insertedText.TextLength;
 
 		/// <summary>
 		/// Creates a new TextChangeEventArgs object.

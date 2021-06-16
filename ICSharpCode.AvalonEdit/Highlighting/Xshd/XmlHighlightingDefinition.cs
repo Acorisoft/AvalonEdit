@@ -406,21 +406,13 @@ namespace ICSharpCode.AvalonEdit.Highlighting.Xshd
 				return null;
 		}
 
-		public IEnumerable<HighlightingColor> NamedHighlightingColors {
-			get {
-				return colorDict.Values;
-			}
-		}
+		public IEnumerable<HighlightingColor> NamedHighlightingColors => colorDict.Values;
 
 		public override string ToString()
 		{
 			return this.Name;
 		}
 
-		public IDictionary<string, string> Properties {
-			get {
-				return propDict;
-			}
-		}
+		public IDictionary<string, string> Properties => propDict;
 	}
 }

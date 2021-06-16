@@ -95,9 +95,7 @@ namespace ICSharpCode.AvalonEdit.Utils
 		/// <summary>
 		/// Gets if this stack is empty.
 		/// </summary>
-		public bool IsEmpty {
-			get { return next == null; }
-		}
+		public bool IsEmpty => next == null;
 
 		/// <summary>
 		/// Gets an enumerator that iterates through the stack top-to-bottom.

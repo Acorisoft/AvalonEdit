@@ -90,9 +90,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets the element displayed by the InlineObjectRun.
 		/// </summary>
-		public UIElement Element {
-			get { return element; }
-		}
+		public UIElement Element => element;
 
 		/// <summary>
 		/// Gets the VisualLine that contains this object. This property is only available after the object
@@ -101,34 +99,22 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		public VisualLine VisualLine { get; internal set; }
 
 		/// <inheritdoc/>
-		public override LineBreakCondition BreakBefore {
-			get { return LineBreakCondition.BreakDesired; }
-		}
+		public override LineBreakCondition BreakBefore => LineBreakCondition.BreakDesired;
 
 		/// <inheritdoc/>
-		public override LineBreakCondition BreakAfter {
-			get { return LineBreakCondition.BreakDesired; }
-		}
+		public override LineBreakCondition BreakAfter => LineBreakCondition.BreakDesired;
 
 		/// <inheritdoc/>
-		public override bool HasFixedSize {
-			get { return true; }
-		}
+		public override bool HasFixedSize => true;
 
 		/// <inheritdoc/>
-		public override CharacterBufferReference CharacterBufferReference {
-			get { return new CharacterBufferReference(); }
-		}
+		public override CharacterBufferReference CharacterBufferReference => new CharacterBufferReference();
 
 		/// <inheritdoc/>
-		public override int Length {
-			get { return length; }
-		}
+		public override int Length => length;
 
 		/// <inheritdoc/>
-		public override TextRunProperties Properties {
-			get { return properties; }
-		}
+		public override TextRunProperties Properties => properties;
 
 		/// <inheritdoc/>
 		public override TextEmbeddedObjectMetrics Format(double remainingParagraphWidth)

@@ -35,9 +35,7 @@ namespace ICSharpCode.AvalonEdit.Snippets
 		/// <summary>
 		/// Gets the list of child elements.
 		/// </summary>
-		public IList<SnippetElement> Elements {
-			get { return elements; }
-		}
+		public IList<SnippetElement> Elements => elements;
 
 		/// <inheritdoc/>
 		public override void Insert(InsertionContext context)

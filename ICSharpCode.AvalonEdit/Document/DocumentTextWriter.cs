@@ -50,8 +50,8 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// Gets/Sets the current insertion offset.
 		/// </summary>
 		public int InsertionOffset {
-			get { return insertionOffset; }
-			set { insertionOffset = value; }
+			get => insertionOffset;
+			set => insertionOffset = value;
 		}
 
 		/// <inheritdoc/>
@@ -76,8 +76,6 @@ namespace ICSharpCode.AvalonEdit.Document
 		}
 
 		/// <inheritdoc/>
-		public override Encoding Encoding {
-			get { return Encoding.UTF8; }
-		}
+		public override Encoding Encoding => Encoding.UTF8;
 	}
 }

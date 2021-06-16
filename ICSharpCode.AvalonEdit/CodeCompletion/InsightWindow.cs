@@ -67,9 +67,7 @@ namespace ICSharpCode.AvalonEdit.CodeCompletion
 		public bool CloseAutomatically { get; set; }
 
 		/// <inheritdoc/>
-		protected override bool CloseOnFocusLost {
-			get { return this.CloseAutomatically; }
-		}
+		protected override bool CloseOnFocusLost => this.CloseAutomatically;
 
 		void AttachEvents()
 		{

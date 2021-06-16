@@ -66,9 +66,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 			}
 		}
 
-		TextArea ITextAreaInputHandler.TextArea {
-			get { return textArea; }
-		}
+		TextArea ITextAreaInputHandler.TextArea => textArea;
 
 		void ITextAreaInputHandler.Attach()
 		{
@@ -461,7 +459,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		}
 
 		public MouseSelectionMode MouseSelectionMode {
-			get { return mode; }
+			get => mode;
 			set {
 				if (mode == value)
 					return;

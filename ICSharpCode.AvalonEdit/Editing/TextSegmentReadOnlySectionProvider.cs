@@ -34,9 +34,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// <summary>
 		/// Gets the collection storing the read-only segments.
 		/// </summary>
-		public TextSegmentCollection<T> Segments {
-			get { return segments; }
-		}
+		public TextSegmentCollection<T> Segments => segments;
 
 		/// <summary>
 		/// Creates a new TextSegmentReadOnlySectionProvider instance for the specified document.

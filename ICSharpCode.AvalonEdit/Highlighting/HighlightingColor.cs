@@ -51,9 +51,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// Gets/Sets the name of the color.
 		/// </summary>
 		public string Name {
-			get {
-				return name;
-			}
+			get => name;
 			set {
 				if (frozen)
 					throw new InvalidOperationException();
@@ -65,9 +63,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// Gets/sets the font family. Null if the highlighting color does not change the font style.
 		/// </summary>
 		public FontFamily FontFamily {
-			get {
-				return fontFamily;
-			}
+			get => fontFamily;
 			set {
 				if (frozen)
 					throw new InvalidOperationException();
@@ -79,9 +75,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// Gets/sets the font size. Null if the highlighting color does not change the font style.
 		/// </summary>
 		public int? FontSize {
-			get {
-				return fontSize;
-			}
+			get => fontSize;
 			set {
 				if (frozen)
 					throw new InvalidOperationException();
@@ -93,9 +87,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// Gets/sets the font weight. Null if the highlighting color does not change the font weight.
 		/// </summary>
 		public FontWeight? FontWeight {
-			get {
-				return fontWeight;
-			}
+			get => fontWeight;
 			set {
 				if (frozen)
 					throw new InvalidOperationException();
@@ -107,9 +99,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// Gets/sets the font style. Null if the highlighting color does not change the font style.
 		/// </summary>
 		public FontStyle? FontStyle {
-			get {
-				return fontStyle;
-			}
+			get => fontStyle;
 			set {
 				if (frozen)
 					throw new InvalidOperationException();
@@ -121,9 +111,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		///  Gets/sets the underline flag. Null if the underline status does not change the font style.
 		/// </summary>
 		public bool? Underline {
-			get {
-				return underline;
-			}
+			get => underline;
 			set {
 				if (frozen)
 					throw new InvalidOperationException();
@@ -135,9 +123,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		///  Gets/sets the strikethrough flag. Null if the strikethrough status does not change the font style.
 		/// </summary>
 		public bool? Strikethrough {
-			get {
-				return strikethrough;
-			}
+			get => strikethrough;
 			set {
 				if (frozen)
 					throw new InvalidOperationException();
@@ -149,9 +135,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// Gets/sets the foreground color applied by the highlighting.
 		/// </summary>
 		public HighlightingBrush Foreground {
-			get {
-				return foreground;
-			}
+			get => foreground;
 			set {
 				if (frozen)
 					throw new InvalidOperationException();
@@ -163,9 +147,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// Gets/sets the background color applied by the highlighting.
 		/// </summary>
 		public HighlightingBrush Background {
-			get {
-				return background;
-			}
+			get => background;
 			set {
 				if (frozen)
 					throw new InvalidOperationException();
@@ -291,9 +273,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// <summary>
 		/// Gets whether this HighlightingColor instance is frozen.
 		/// </summary>
-		public bool IsFrozen {
-			get { return frozen; }
-		}
+		public bool IsFrozen => frozen;
 
 		/// <summary>
 		/// Clones this highlighting color.
@@ -374,12 +354,9 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 				this.fontSize = color.fontSize;
 		}
 
-		internal bool IsEmptyForMerge {
-			get {
-				return fontWeight == null && fontStyle == null && underline == null
-					   && strikethrough == null && foreground == null && background == null
-					   && fontFamily == null && fontSize == null;
-			}
-		}
+		internal bool IsEmptyForMerge =>
+			fontWeight == null && fontStyle == null && underline == null
+			&& strikethrough == null && foreground == null && background == null
+			&& fontFamily == null && fontSize == null;
 	}
 }

@@ -113,9 +113,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets if this VisualLineElement can be split.
 		/// </summary>
-		public virtual bool CanSplit {
-			get { return false; }
-		}
+		public virtual bool CanSplit => false;
 
 		/// <summary>
 		/// Splits the element.
@@ -238,9 +236,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// This property has an effect only for VisualLineElements that are at the start or end of a
 		/// <see cref="VisualLine"/>.
 		/// </summary>
-		public virtual bool HandlesLineBorders {
-			get { return false; }
-		}
+		public virtual bool HandlesLineBorders => false;
 
 		/// <summary>
 		/// Queries the cursor over the visual line element.

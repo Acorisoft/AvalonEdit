@@ -181,9 +181,7 @@ namespace ICSharpCode.AvalonEdit.Snippets
 		/// <summary>
 		/// Gets the list of active elements.
 		/// </summary>
-		public IEnumerable<IActiveElement> ActiveElements {
-			get { return registeredElements; }
-		}
+		public IEnumerable<IActiveElement> ActiveElements => registeredElements;
 
 		/// <summary>
 		/// Calls the <see cref="IActiveElement.OnInsertionCompleted"/> method on all registered active elements

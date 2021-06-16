@@ -345,11 +345,7 @@ namespace ICSharpCode.AvalonEdit.Utils
 			}
 		}
 
-		bool ICollection<T>.IsReadOnly {
-			get {
-				return false;
-			}
-		}
+		bool ICollection<T>.IsReadOnly => false;
 
 		/// <summary>
 		/// Gets the index of the specified <paramref name="item"/>.

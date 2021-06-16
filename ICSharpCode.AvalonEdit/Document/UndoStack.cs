@@ -66,9 +66,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// <summary>
 		/// Gets whether the document is currently in its original state (no modifications).
 		/// </summary>
-		public bool IsOriginalFile {
-			get { return isOriginalFile; }
-		}
+		public bool IsOriginalFile => isOriginalFile;
 
 		void RecalcIsOriginalFile()
 		{
@@ -114,25 +112,19 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// Gets if the undo stack currently accepts changes.
 		/// Is false while an undo action is running.
 		/// </summary>
-		public bool AcceptChanges {
-			get { return state == StateListen; }
-		}
+		public bool AcceptChanges => state == StateListen;
 
 		/// <summary>
 		/// Gets if there are actions on the undo stack.
 		/// Use the PropertyChanged event to listen to changes of this property.
 		/// </summary>
-		public bool CanUndo {
-			get { return undostack.Count > 0; }
-		}
+		public bool CanUndo => undostack.Count > 0;
 
 		/// <summary>
 		/// Gets if there are actions on the redo stack.
 		/// Use the PropertyChanged event to listen to changes of this property.
 		/// </summary>
-		public bool CanRedo {
-			get { return redostack.Count > 0; }
-		}
+		public bool CanRedo => redostack.Count > 0;
 
 		/// <summary>
 		/// Gets/Sets the limit on the number of items on the undo stack.
@@ -140,7 +132,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// <remarks>The size limit is enforced only on the number of stored top-level undo groups.
 		/// Elements within undo groups do not count towards the size limit.</remarks>
 		public int SizeLimit {
-			get { return sizeLimit; }
+			get => sizeLimit;
 			set {
 				if (value < 0)
 					ThrowUtil.CheckNotNegative(value, "value");
@@ -171,9 +163,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// use a group descriptor to mark your changes, and on the second action,
 		/// compare LastGroupDescriptor and use <see cref="StartContinuedUndoGroup"/> if you
 		/// want to join the undo groups.</remarks>
-		public object LastGroupDescriptor {
-			get { return lastGroupDescriptor; }
-		}
+		public object LastGroupDescriptor => lastGroupDescriptor;
 
 		/// <summary>
 		/// Starts grouping changes.

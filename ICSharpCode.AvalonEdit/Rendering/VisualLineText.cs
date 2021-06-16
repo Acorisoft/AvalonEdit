@@ -36,9 +36,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets the parent visual line.
 		/// </summary>
-		public VisualLine ParentVisualLine {
-			get { return parentVisualLine; }
-		}
+		public VisualLine ParentVisualLine => parentVisualLine;
 
 		/// <summary>
 		/// Creates a visual line text element with the specified length.
@@ -92,9 +90,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		}
 
 		/// <inheritdoc/>
-		public override bool CanSplit {
-			get { return true; }
-		}
+		public override bool CanSplit => true;
 
 		/// <inheritdoc/>
 		public override void Split(int splitVisualColumn, IList<VisualLineElement> elements, int elementIndex)

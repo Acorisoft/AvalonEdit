@@ -48,7 +48,7 @@ namespace ICSharpCode.AvalonEdit.Indentation.CSharp
 		/// Gets/Sets the indentation string.
 		/// </summary>
 		public string IndentationString {
-			get { return indentationString; }
+			get => indentationString;
 			set {
 				if (string.IsNullOrEmpty(value))
 					throw new ArgumentException("Indentation string must not be null or empty");

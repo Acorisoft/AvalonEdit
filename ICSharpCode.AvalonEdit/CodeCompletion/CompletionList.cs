@@ -46,8 +46,8 @@ namespace ICSharpCode.AvalonEdit.CodeCompletion
 		/// If false, enables the old behavior: no filtering, search by string.StartsWith.
 		/// </summary>
 		public bool IsFiltering {
-			get { return isFiltering; }
-			set { isFiltering = value; }
+			get => isFiltering;
+			set => isFiltering = value;
 		}
 
 		/// <summary>
@@ -62,8 +62,8 @@ namespace ICSharpCode.AvalonEdit.CodeCompletion
 		/// If EmptyTemplate is null, nothing will be shown.
 		/// </summary>
 		public ControlTemplate EmptyTemplate {
-			get { return (ControlTemplate)GetValue(EmptyTemplateProperty); }
-			set { SetValue(EmptyTemplateProperty, value); }
+			get => (ControlTemplate)GetValue(EmptyTemplateProperty);
+			set => SetValue(EmptyTemplateProperty, value);
 		}
 
 		/// <summary>
@@ -108,18 +108,14 @@ namespace ICSharpCode.AvalonEdit.CodeCompletion
 		/// <summary>
 		/// Gets the scroll viewer used in this list box.
 		/// </summary>
-		public ScrollViewer ScrollViewer {
-			get { return listBox != null ? listBox.scrollViewer : null; }
-		}
+		public ScrollViewer ScrollViewer => listBox != null ? listBox.scrollViewer : null;
 
 		ObservableCollection<ICompletionData> completionData = new ObservableCollection<ICompletionData>();
 
 		/// <summary>
 		/// Gets the list to which completion data can be added.
 		/// </summary>
-		public IList<ICompletionData> CompletionData {
-			get { return completionData; }
-		}
+		public IList<ICompletionData> CompletionData => completionData;
 
 		/// <inheritdoc/>
 		protected override void OnKeyDown(KeyEventArgs e)
@@ -196,9 +192,7 @@ namespace ICSharpCode.AvalonEdit.CodeCompletion
 		/// You might want to also call <see cref="ScrollIntoView"/>.
 		/// </remarks>
 		public ICompletionData SelectedItem {
-			get {
-				return (listBox != null ? listBox.SelectedItem : null) as ICompletionData;
-			}
+			get => (listBox != null ? listBox.SelectedItem : null) as ICompletionData;
 			set {
 				if (listBox == null && value != null)
 					ApplyTemplate();
@@ -222,8 +216,8 @@ namespace ICSharpCode.AvalonEdit.CodeCompletion
 		/// Occurs when the SelectedItem property changes.
 		/// </summary>
 		public event SelectionChangedEventHandler SelectionChanged {
-			add { AddHandler(Selector.SelectionChangedEvent, value); }
-			remove { RemoveHandler(Selector.SelectionChangedEvent, value); }
+			add => AddHandler(Selector.SelectionChangedEvent, value);
+			remove => RemoveHandler(Selector.SelectionChangedEvent, value);
 		}
 
 		// SelectItem gets called twice for every typed character (once from FormatLine), this helps execute SelectItem only once

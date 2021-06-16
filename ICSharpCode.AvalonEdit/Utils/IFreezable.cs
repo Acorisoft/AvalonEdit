@@ -101,9 +101,7 @@ namespace ICSharpCode.AvalonEdit.Utils
 		/// <summary>
 		/// Gets if this instance is frozen. Frozen instances are immutable and thus thread-safe.
 		/// </summary>
-		public bool IsFrozen {
-			get { return isFrozen; }
-		}
+		public bool IsFrozen => isFrozen;
 
 		/// <summary>
 		/// Freezes this instance.

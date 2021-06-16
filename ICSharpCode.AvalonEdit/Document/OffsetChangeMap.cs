@@ -202,9 +202,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// <summary>
 		/// Gets if this instance is frozen. Frozen instances are immutable and thus thread-safe.
 		/// </summary>
-		public bool IsFrozen {
-			get { return isFrozen; }
-		}
+		public bool IsFrozen => isFrozen;
 
 		/// <summary>
 		/// Freezes this instance.
@@ -233,39 +231,29 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// <summary>
 		/// The offset at which the change occurs.
 		/// </summary>
-		public int Offset {
-			get { return offset; }
-		}
+		public int Offset => offset;
 
 		/// <summary>
 		/// The number of characters inserted.
 		/// Returns 0 if this entry represents a removal.
 		/// </summary>
-		public int InsertionLength {
-			get { return (int)(insertionLengthWithMovementFlag & 0x7fffffff); }
-		}
+		public int InsertionLength => (int)(insertionLengthWithMovementFlag & 0x7fffffff);
 
 		/// <summary>
 		/// The number of characters removed.
 		/// Returns 0 if this entry represents an insertion.
 		/// </summary>
-		public int RemovalLength {
-			get { return (int)(removalLengthWithDeletionFlag & 0x7fffffff); }
-		}
+		public int RemovalLength => (int)(removalLengthWithDeletionFlag & 0x7fffffff);
 
 		/// <summary>
 		/// Gets whether the removal should not cause any anchor deletions.
 		/// </summary>
-		public bool RemovalNeverCausesAnchorDeletion {
-			get { return (removalLengthWithDeletionFlag & 0x80000000) != 0; }
-		}
+		public bool RemovalNeverCausesAnchorDeletion => (removalLengthWithDeletionFlag & 0x80000000) != 0;
 
 		/// <summary>
 		/// Gets whether default anchor movement causes the anchor to stay in front of the caret.
 		/// </summary>
-		public bool DefaultAnchorMovementIsBeforeInsertion {
-			get { return (insertionLengthWithMovementFlag & 0x80000000) != 0; }
-		}
+		public bool DefaultAnchorMovementIsBeforeInsertion => (insertionLengthWithMovementFlag & 0x80000000) != 0;
 
 		/// <summary>
 		/// Gets the new offset where the specified offset moves after this document change.

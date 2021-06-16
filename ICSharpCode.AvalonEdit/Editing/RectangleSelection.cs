@@ -231,31 +231,19 @@ namespace ICSharpCode.AvalonEdit.Editing
 		}
 
 		/// <inheritdoc/>
-		public override bool EnableVirtualSpace {
-			get { return true; }
-		}
+		public override bool EnableVirtualSpace => true;
 
 		/// <inheritdoc/>
-		public override ISegment SurroundingSegment {
-			get {
-				return new SimpleSegment(topLeftOffset, bottomRightOffset - topLeftOffset);
-			}
-		}
+		public override ISegment SurroundingSegment => new SimpleSegment(topLeftOffset, bottomRightOffset - topLeftOffset);
 
 		/// <inheritdoc/>
-		public override IEnumerable<SelectionSegment> Segments {
-			get { return segments; }
-		}
+		public override IEnumerable<SelectionSegment> Segments => segments;
 
 		/// <inheritdoc/>
-		public override TextViewPosition StartPosition {
-			get { return start; }
-		}
+		public override TextViewPosition StartPosition => start;
 
 		/// <inheritdoc/>
-		public override TextViewPosition EndPosition {
-			get { return end; }
-		}
+		public override TextViewPosition EndPosition => end;
 
 		/// <inheritdoc/>
 		public override bool Equals(object obj)

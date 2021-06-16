@@ -101,9 +101,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// <summary>
 		/// Gets the text.
 		/// </summary>
-		public string Text {
-			get { return text; }
-		}
+		public string Text => text;
 
 		/// <summary>
 		/// Applies the properties from the HighlightingColor to the specified text segment.

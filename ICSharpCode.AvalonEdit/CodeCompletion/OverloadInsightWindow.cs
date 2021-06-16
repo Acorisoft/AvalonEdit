@@ -43,8 +43,8 @@ namespace ICSharpCode.AvalonEdit.CodeCompletion
 		/// Gets/Sets the item provider.
 		/// </summary>
 		public IOverloadProvider Provider {
-			get { return overloadViewer.Provider; }
-			set { overloadViewer.Provider = value; }
+			get => overloadViewer.Provider;
+			set => overloadViewer.Provider = value;
 		}
 
 		/// <inheritdoc/>

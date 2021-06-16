@@ -134,9 +134,8 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// </summary>
 		/// <exception cref="InvalidOperationException">The line was deleted.</exception>
 		/// <remarks>EndOffset = <see cref="Offset"/> + <see cref="Length"/>.</remarks>
-		public int EndOffset {
-			get { return this.Offset + this.Length; }
-		}
+		public int EndOffset => this.Offset + this.Length;
+
 		#endregion
 
 		#region Length
@@ -165,10 +164,9 @@ namespace ICSharpCode.AvalonEdit.Document
 				DebugVerifyAccess();
 				return totalLength;
 			}
-			internal set {
+			internal set =>
 				// this is set by DocumentLineTree
 				totalLength = value;
-			}
 		}
 
 		/// <summary>
@@ -237,13 +235,10 @@ namespace ICSharpCode.AvalonEdit.Document
 			}
 		}
 
-		IDocumentLine IDocumentLine.NextLine {
-			get { return this.NextLine; }
-		}
+		IDocumentLine IDocumentLine.NextLine => this.NextLine;
 
-		IDocumentLine IDocumentLine.PreviousLine {
-			get { return this.PreviousLine; }
-		}
+		IDocumentLine IDocumentLine.PreviousLine => this.PreviousLine;
+
 		#endregion
 
 		#region ToString

@@ -132,8 +132,8 @@ namespace ICSharpCode.AvalonEdit.Search
 		/// Fired when SearchOptions are modified inside the SearchPanel.
 		/// </summary>
 		public event EventHandler<SearchOptionsChangedEventArgs> SearchOptionsChanged {
-			add { panel.SearchOptionsChanged += value; }
-			remove { panel.SearchOptionsChanged -= value; }
+			add => panel.SearchOptionsChanged += value;
+			remove => panel.SearchOptionsChanged -= value;
 		}
 	}
 }

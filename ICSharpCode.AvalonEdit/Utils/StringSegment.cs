@@ -61,23 +61,17 @@ namespace ICSharpCode.AvalonEdit.Utils
 		/// <summary>
 		/// Gets the string used for this segment.
 		/// </summary>
-		public string Text {
-			get { return text; }
-		}
+		public string Text => text;
 
 		/// <summary>
 		/// Gets the start offset of the segment with the text.
 		/// </summary>
-		public int Offset {
-			get { return offset; }
-		}
+		public int Offset => offset;
 
 		/// <summary>
 		/// Gets the length of the segment.
 		/// </summary>
-		public int Count {
-			get { return count; }
-		}
+		public int Count => count;
 
 		#region Equals and GetHashCode implementation
 		/// <inheritdoc/>

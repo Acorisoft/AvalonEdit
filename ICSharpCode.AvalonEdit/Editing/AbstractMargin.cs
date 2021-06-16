@@ -46,8 +46,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// </summary>
 		/// <remarks>Adding a margin to <see cref="TextArea.LeftMargins"/> will automatically set this property to the text area's TextView.</remarks>
 		public TextView TextView {
-			get { return (TextView)GetValue(TextViewProperty); }
-			set { SetValue(TextViewProperty, value); }
+			get => (TextView)GetValue(TextViewProperty);
+			set => SetValue(TextViewProperty, value);
 		}
 
 		static void OnTextViewChanged(DependencyObject dp, DependencyPropertyChangedEventArgs e)
@@ -83,9 +83,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// <summary>
 		/// Gets the document associated with the margin.
 		/// </summary>
-		public TextDocument Document {
-			get { return document; }
-		}
+		public TextDocument Document => document;
 
 		/// <summary>
 		/// Called when the <see cref="TextView"/> is changing.

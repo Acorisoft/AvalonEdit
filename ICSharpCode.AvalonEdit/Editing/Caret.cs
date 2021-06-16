@@ -111,11 +111,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// <summary>
 		/// Gets the caret position without validating it.
 		/// </summary>
-		internal TextViewPosition NonValidatedPosition {
-			get {
-				return position;
-			}
-		}
+		internal TextViewPosition NonValidatedPosition => position;
 
 		/// <summary>
 		/// Gets/Sets the location of the caret.
@@ -123,32 +119,24 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// to validate the visual column.
 		/// </summary>
 		public TextLocation Location {
-			get {
-				return position.Location;
-			}
-			set {
-				this.Position = new TextViewPosition(value);
-			}
+			get => position.Location;
+			set => this.Position = new TextViewPosition(value);
 		}
 
 		/// <summary>
 		/// Gets/Sets the caret line.
 		/// </summary>
 		public int Line {
-			get { return position.Line; }
-			set {
-				this.Position = new TextViewPosition(value, position.Column);
-			}
+			get => position.Line;
+			set => this.Position = new TextViewPosition(value, position.Column);
 		}
 
 		/// <summary>
 		/// Gets/Sets the caret column.
 		/// </summary>
 		public int Column {
-			get { return position.Column; }
-			set {
-				this.Position = new TextViewPosition(position.Line, value);
-			}
+			get => position.Column;
+			set => this.Position = new TextViewPosition(position.Line, value);
 		}
 
 		/// <summary>
@@ -159,9 +147,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 				ValidateVisualColumn();
 				return position.VisualColumn;
 			}
-			set {
-				this.Position = new TextViewPosition(position.Line, position.Column, value);
-			}
+			set => this.Position = new TextViewPosition(position.Line, position.Column, value);
 		}
 
 		bool isInVirtualSpace;
@@ -232,8 +218,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// This property is NaN if the caret has no desired position.
 		/// </summary>
 		public double DesiredXPos {
-			get { return desiredXPos; }
-			set { desiredXPos = value; }
+			get => desiredXPos;
+			set => desiredXPos = value;
 		}
 
 		void ValidatePosition()
@@ -527,8 +513,8 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// Gets/Sets the color of the caret.
 		/// </summary>
 		public Brush CaretBrush {
-			get { return caretAdorner.CaretBrush; }
-			set { caretAdorner.CaretBrush = value; }
+			get => caretAdorner.CaretBrush;
+			set => caretAdorner.CaretBrush = value;
 		}
 	}
 }

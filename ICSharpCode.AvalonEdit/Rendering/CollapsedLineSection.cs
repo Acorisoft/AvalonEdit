@@ -52,9 +52,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Gets if the document line is collapsed.
 		/// This property initially is true and turns to false when uncollapsing the section.
 		/// </summary>
-		public bool IsCollapsed {
-			get { return start != null; }
-		}
+		public bool IsCollapsed => start != null;
 
 		/// <summary>
 		/// Gets the start line of the section.
@@ -62,8 +60,8 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// this property returns null.
 		/// </summary>
 		public DocumentLine Start {
-			get { return start; }
-			internal set { start = value; }
+			get => start;
+			internal set => start = value;
 		}
 
 		/// <summary>
@@ -72,8 +70,8 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// this property returns null.
 		/// </summary>
 		public DocumentLine End {
-			get { return end; }
-			internal set { end = value; }
+			get => end;
+			internal set => end = value;
 		}
 
 		/// <summary>

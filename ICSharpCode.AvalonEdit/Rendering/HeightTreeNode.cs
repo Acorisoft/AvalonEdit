@@ -113,11 +113,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// </summary>
 		internal List<CollapsedLineSection> collapsedSections;
 
-		internal bool IsDirectlyCollapsed {
-			get {
-				return collapsedSections != null;
-			}
-		}
+		internal bool IsDirectlyCollapsed => collapsedSections != null;
 
 		internal void AddDirectlyCollapsed(CollapsedLineSection section)
 		{

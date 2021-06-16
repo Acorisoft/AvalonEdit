@@ -146,39 +146,25 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets the element for which the FormattedTextRun was created.
 		/// </summary>
-		public FormattedTextElement Element {
-			get { return element; }
-		}
+		public FormattedTextElement Element => element;
 
 		/// <inheritdoc/>
-		public override LineBreakCondition BreakBefore {
-			get { return element.BreakBefore; }
-		}
+		public override LineBreakCondition BreakBefore => element.BreakBefore;
 
 		/// <inheritdoc/>
-		public override LineBreakCondition BreakAfter {
-			get { return element.BreakAfter; }
-		}
+		public override LineBreakCondition BreakAfter => element.BreakAfter;
 
 		/// <inheritdoc/>
-		public override bool HasFixedSize {
-			get { return true; }
-		}
+		public override bool HasFixedSize => true;
 
 		/// <inheritdoc/>
-		public override CharacterBufferReference CharacterBufferReference {
-			get { return new CharacterBufferReference(); }
-		}
+		public override CharacterBufferReference CharacterBufferReference => new CharacterBufferReference();
 
 		/// <inheritdoc/>
-		public override int Length {
-			get { return element.VisualLength; }
-		}
+		public override int Length => element.VisualLength;
 
 		/// <inheritdoc/>
-		public override TextRunProperties Properties {
-			get { return properties; }
-		}
+		public override TextRunProperties Properties => properties;
 
 		/// <inheritdoc/>
 		public override TextEmbeddedObjectMetrics Format(double remainingParagraphWidth)

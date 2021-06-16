@@ -38,7 +38,7 @@ namespace ICSharpCode.AvalonEdit.Folding
 		/// Gets/sets if the section is folded.
 		/// </summary>
 		public bool IsFolded {
-			get { return isFolded; }
+			get => isFolded;
 			set {
 				if (isFolded != value) {
 					isFolded = value;
@@ -93,9 +93,7 @@ namespace ICSharpCode.AvalonEdit.Folding
 		/// Gets/Sets the text used to display the collapsed version of the folding section.
 		/// </summary>
 		public string Title {
-			get {
-				return title;
-			}
+			get => title;
 			set {
 				if (title != value) {
 					title = value;
@@ -108,11 +106,7 @@ namespace ICSharpCode.AvalonEdit.Folding
 		/// <summary>
 		/// Gets the content of the collapsed lines as text.
 		/// </summary>
-		public string TextContent {
-			get {
-				return manager.document.GetText(StartOffset, EndOffset - StartOffset);
-			}
-		}
+		public string TextContent => manager.document.GetText(StartOffset, EndOffset - StartOffset);
 
 		/// <summary>
 		/// Gets/Sets an additional object associated with this folding section.

@@ -93,11 +93,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 				}
 			}
 
-			public HighlightingRuleSet MainRuleSet {
-				get {
-					return GetDefinition().MainRuleSet;
-				}
-			}
+			public HighlightingRuleSet MainRuleSet => GetDefinition().MainRuleSet;
 
 			public HighlightingRuleSet GetNamedRuleSet(string name)
 			{
@@ -109,22 +105,14 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 				return GetDefinition().GetNamedColor(name);
 			}
 
-			public IEnumerable<HighlightingColor> NamedHighlightingColors {
-				get {
-					return GetDefinition().NamedHighlightingColors;
-				}
-			}
+			public IEnumerable<HighlightingColor> NamedHighlightingColors => GetDefinition().NamedHighlightingColors;
 
 			public override string ToString()
 			{
 				return this.Name;
 			}
 
-			public IDictionary<string, string> Properties {
-				get {
-					return GetDefinition().Properties;
-				}
-			}
+			public IDictionary<string, string> Properties => GetDefinition().Properties;
 		}
 
 		readonly object lockObj = new object();
@@ -214,11 +202,7 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// Gets the default HighlightingManager instance.
 		/// The default HighlightingManager comes with built-in highlightings.
 		/// </summary>
-		public static HighlightingManager Instance {
-			get {
-				return DefaultHighlightingManager.Instance;
-			}
-		}
+		public static HighlightingManager Instance => DefaultHighlightingManager.Instance;
 
 		internal sealed class DefaultHighlightingManager : HighlightingManager
 		{

@@ -50,12 +50,8 @@ namespace ICSharpCode.AvalonEdit.Utils
 		/// Gets/Sets the string used to indent by one level.
 		/// </summary>
 		public string IndentationString {
-			get {
-				return indentationString;
-			}
-			set {
-				indentationString = value;
-			}
+			get => indentationString;
+			set => indentationString = value;
 		}
 
 		/// <inheritdoc/>
@@ -118,23 +114,15 @@ namespace ICSharpCode.AvalonEdit.Utils
 		}
 
 		/// <inheritdoc/>
-		public override Encoding Encoding {
-			get { return textWriter.Encoding; }
-		}
+		public override Encoding Encoding => textWriter.Encoding;
 
 		/// <inheritdoc/>
-		public override IFormatProvider FormatProvider {
-			get { return textWriter.FormatProvider; }
-		}
+		public override IFormatProvider FormatProvider => textWriter.FormatProvider;
 
 		/// <inheritdoc/>
 		public override string NewLine {
-			get {
-				return textWriter.NewLine;
-			}
-			set {
-				textWriter.NewLine = value;
-			}
+			get => textWriter.NewLine;
+			set => textWriter.NewLine = value;
 		}
 	}
 }

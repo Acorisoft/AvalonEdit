@@ -51,10 +51,8 @@ namespace ICSharpCode.AvalonEdit.Highlighting
 		/// Gets/sets the current span stack.
 		/// </summary>
 		public SpanStack CurrentSpanStack {
-			get { return spanStack; }
-			set {
-				spanStack = value ?? SpanStack.Empty;
-			}
+			get => spanStack;
+			set => spanStack = value ?? SpanStack.Empty;
 		}
 
 		#region Highlighting Engine

@@ -147,16 +147,12 @@ namespace ICSharpCode.AvalonEdit.Editing
 		/// <summary>
 		/// Gets whether the selection is empty.
 		/// </summary>
-		public virtual bool IsEmpty {
-			get { return Length == 0; }
-		}
+		public virtual bool IsEmpty => Length == 0;
 
 		/// <summary>
 		/// Gets whether virtual space is enabled for this selection.
 		/// </summary>
-		public virtual bool EnableVirtualSpace {
-			get { return textArea.Options.EnableVirtualSpace; }
-		}
+		public virtual bool EnableVirtualSpace => textArea.Options.EnableVirtualSpace;
 
 		/// <summary>
 		/// Gets the selection length.

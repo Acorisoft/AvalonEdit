@@ -186,29 +186,17 @@ namespace ICSharpCode.AvalonEdit.Rendering
 				this.element = element;
 			}
 
-			public override LineBreakCondition BreakBefore {
-				get { return LineBreakCondition.BreakPossible; }
-			}
+			public override LineBreakCondition BreakBefore => LineBreakCondition.BreakPossible;
 
-			public override LineBreakCondition BreakAfter {
-				get { return LineBreakCondition.BreakRestrained; }
-			}
+			public override LineBreakCondition BreakAfter => LineBreakCondition.BreakRestrained;
 
-			public override bool HasFixedSize {
-				get { return true; }
-			}
+			public override bool HasFixedSize => true;
 
-			public override CharacterBufferReference CharacterBufferReference {
-				get { return new CharacterBufferReference(); }
-			}
+			public override CharacterBufferReference CharacterBufferReference => new CharacterBufferReference();
 
-			public override int Length {
-				get { return 1; }
-			}
+			public override int Length => 1;
 
-			public override TextRunProperties Properties {
-				get { return properties; }
-			}
+			public override TextRunProperties Properties => properties;
 
 			public override TextEmbeddedObjectMetrics Format(double remainingParagraphWidth)
 			{

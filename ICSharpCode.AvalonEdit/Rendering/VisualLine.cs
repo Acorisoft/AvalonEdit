@@ -88,11 +88,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// Gets the start offset of the VisualLine inside the document.
 		/// This is equivalent to <c>FirstDocumentLine.Offset</c>.
 		/// </summary>
-		public int StartOffset {
-			get {
-				return FirstDocumentLine.Offset;
-			}
-		}
+		public int StartOffset => FirstDocumentLine.Offset;
 
 		/// <summary>
 		/// Length in visual line coordinates.
@@ -607,9 +603,7 @@ namespace ICSharpCode.AvalonEdit.Rendering
 		/// <summary>
 		/// Gets whether the visual line was disposed.
 		/// </summary>
-		public bool IsDisposed {
-			get { return phase == LifetimePhase.Disposed; }
-		}
+		public bool IsDisposed => phase == LifetimePhase.Disposed;
 
 		internal void Dispose()
 		{

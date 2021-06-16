@@ -71,9 +71,7 @@ namespace ICSharpCode.AvalonEdit.Utils
 				this.objectList = objectList;
 			}
 
-			public bool Success {
-				get { return objectList != null; }
-			}
+			public bool Success => objectList != null;
 
 			public void Dispose()
 			{

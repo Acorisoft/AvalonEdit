@@ -62,9 +62,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// <summary>
 		/// Gets the document owning the anchor.
 		/// </summary>
-		public TextDocument Document {
-			get { return document; }
-		}
+		public TextDocument Document => document;
 
 		/// <inheritdoc/>
 		public AnchorMovementType MovementType { get; set; }
@@ -120,11 +118,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// Gets the line number of the anchor.
 		/// </summary>
 		/// <exception cref="InvalidOperationException">Thrown when trying to get the Offset from a deleted anchor.</exception>
-		public int Line {
-			get {
-				return document.GetLineByOffset(this.Offset).LineNumber;
-			}
-		}
+		public int Line => document.GetLineByOffset(this.Offset).LineNumber;
 
 		/// <summary>
 		/// Gets the column number of this anchor.
@@ -141,11 +135,7 @@ namespace ICSharpCode.AvalonEdit.Document
 		/// Gets the text location of this anchor.
 		/// </summary>
 		/// <exception cref="InvalidOperationException">Thrown when trying to get the Offset from a deleted anchor.</exception>
-		public TextLocation Location {
-			get {
-				return document.GetLocation(this.Offset);
-			}
-		}
+		public TextLocation Location => document.GetLocation(this.Offset);
 
 		/// <inheritdoc/>
 		public override string ToString()

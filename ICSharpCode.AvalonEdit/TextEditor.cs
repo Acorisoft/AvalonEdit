@@ -108,8 +108,8 @@ namespace ICSharpCode.AvalonEdit
 		/// This is a dependency property.
 		/// </summary>
 		public TextDocument Document {
-			get { return (TextDocument)GetValue(DocumentProperty); }
-			set { SetValue(DocumentProperty, value); }
+			get => (TextDocument)GetValue(DocumentProperty);
+			set => SetValue(DocumentProperty, value);
 		}
 
 		/// <summary>
@@ -159,8 +159,8 @@ namespace ICSharpCode.AvalonEdit
 		/// Gets/Sets the options currently used by the text editor.
 		/// </summary>
 		public TextEditorOptions Options {
-			get { return (TextEditorOptions)GetValue(OptionsProperty); }
-			set { SetValue(OptionsProperty, value); }
+			get => (TextEditorOptions)GetValue(OptionsProperty);
+			set => SetValue(OptionsProperty, value);
 		}
 
 		/// <summary>
@@ -276,19 +276,13 @@ namespace ICSharpCode.AvalonEdit
 		/// <summary>
 		/// Gets the text area.
 		/// </summary>
-		public TextArea TextArea {
-			get {
-				return textArea;
-			}
-		}
+		public TextArea TextArea => textArea;
 
 		/// <summary>
 		/// Gets the scroll viewer used by the text editor.
 		/// This property can return null if the template has not been applied / does not contain a scroll viewer.
 		/// </summary>
-		public ScrollViewer ScrollViewer {
-			get { return scrollViewer; }
-		}
+		public ScrollViewer ScrollViewer => scrollViewer;
 
 		bool CanExecute(RoutedUICommand command)
 		{
@@ -314,8 +308,8 @@ namespace ICSharpCode.AvalonEdit
 		/// Gets/sets the syntax highlighting definition used to colorize the text.
 		/// </summary>
 		public IHighlightingDefinition SyntaxHighlighting {
-			get { return (IHighlightingDefinition)GetValue(SyntaxHighlightingProperty); }
-			set { SetValue(SyntaxHighlightingProperty, value); }
+			get => (IHighlightingDefinition)GetValue(SyntaxHighlightingProperty);
+			set => SetValue(SyntaxHighlightingProperty, value);
 		}
 
 		IVisualLineTransformer colorizer;
@@ -367,8 +361,8 @@ namespace ICSharpCode.AvalonEdit
 		/// HorizontalScrollBarVisibility setting.
 		/// </remarks>
 		public bool WordWrap {
-			get { return (bool)GetValue(WordWrapProperty); }
-			set { SetValue(WordWrapProperty, Boxes.Box(value)); }
+			get => (bool)GetValue(WordWrapProperty);
+			set => SetValue(WordWrapProperty, Boxes.Box(value));
 		}
 		#endregion
 
@@ -386,8 +380,8 @@ namespace ICSharpCode.AvalonEdit
 		/// <see cref="Editing.TextArea.ReadOnlySectionProvider">TextArea.ReadOnlySectionProvider</see>.
 		/// </summary>
 		public bool IsReadOnly {
-			get { return (bool)GetValue(IsReadOnlyProperty); }
-			set { SetValue(IsReadOnlyProperty, Boxes.Box(value)); }
+			get => (bool)GetValue(IsReadOnlyProperty);
+			set => SetValue(IsReadOnlyProperty, Boxes.Box(value));
 		}
 
 		static void OnIsReadOnlyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -419,8 +413,8 @@ namespace ICSharpCode.AvalonEdit
 		/// Gets/Sets the 'modified' flag.
 		/// </summary>
 		public bool IsModified {
-			get { return (bool)GetValue(IsModifiedProperty); }
-			set { SetValue(IsModifiedProperty, Boxes.Box(value)); }
+			get => (bool)GetValue(IsModifiedProperty);
+			set => SetValue(IsModifiedProperty, Boxes.Box(value));
 		}
 
 		static void OnIsModifiedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -466,8 +460,8 @@ namespace ICSharpCode.AvalonEdit
 		/// Specifies whether line numbers are shown on the left to the text view.
 		/// </summary>
 		public bool ShowLineNumbers {
-			get { return (bool)GetValue(ShowLineNumbersProperty); }
-			set { SetValue(ShowLineNumbersProperty, Boxes.Box(value)); }
+			get => (bool)GetValue(ShowLineNumbersProperty);
+			set => SetValue(ShowLineNumbersProperty, Boxes.Box(value));
 		}
 
 		static void OnShowLineNumbersChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -508,8 +502,8 @@ namespace ICSharpCode.AvalonEdit
 		/// Gets/sets the Brush used for displaying the foreground color of line numbers.
 		/// </summary>
 		public Brush LineNumbersForeground {
-			get { return (Brush)GetValue(LineNumbersForegroundProperty); }
-			set { SetValue(LineNumbersForegroundProperty, value); }
+			get => (Brush)GetValue(LineNumbersForegroundProperty);
+			set => SetValue(LineNumbersForegroundProperty, value);
 		}
 
 		static void OnLineNumbersForegroundChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -739,70 +733,43 @@ namespace ICSharpCode.AvalonEdit
 		/// <summary>
 		/// Gets if the most recent undone command can be redone.
 		/// </summary>
-		public bool CanRedo {
-			get { return CanExecute(ApplicationCommands.Redo); }
-		}
+		public bool CanRedo => CanExecute(ApplicationCommands.Redo);
 
 		/// <summary>
 		/// Gets if the most recent command can be undone.
 		/// </summary>
-		public bool CanUndo {
-			get { return CanExecute(ApplicationCommands.Undo); }
-		}
+		public bool CanUndo => CanExecute(ApplicationCommands.Undo);
 
 		/// <summary>
 		/// Gets the vertical size of the document.
 		/// </summary>
-		public double ExtentHeight {
-			get {
-				return scrollViewer != null ? scrollViewer.ExtentHeight : 0;
-			}
-		}
+		public double ExtentHeight => scrollViewer != null ? scrollViewer.ExtentHeight : 0;
 
 		/// <summary>
 		/// Gets the horizontal size of the current document region.
 		/// </summary>
-		public double ExtentWidth {
-			get {
-				return scrollViewer != null ? scrollViewer.ExtentWidth : 0;
-			}
-		}
+		public double ExtentWidth => scrollViewer != null ? scrollViewer.ExtentWidth : 0;
 
 		/// <summary>
 		/// Gets the horizontal size of the viewport.
 		/// </summary>
-		public double ViewportHeight {
-			get {
-				return scrollViewer != null ? scrollViewer.ViewportHeight : 0;
-			}
-		}
+		public double ViewportHeight => scrollViewer != null ? scrollViewer.ViewportHeight : 0;
 
 		/// <summary>
 		/// Gets the horizontal size of the viewport.
 		/// </summary>
-		public double ViewportWidth {
-			get {
-				return scrollViewer != null ? scrollViewer.ViewportWidth : 0;
-			}
-		}
+		public double ViewportWidth => scrollViewer != null ? scrollViewer.ViewportWidth : 0;
 
 		/// <summary>
 		/// Gets the vertical scroll position.
 		/// </summary>
-		public double VerticalOffset {
-			get {
-				return scrollViewer != null ? scrollViewer.VerticalOffset : 0;
-			}
-		}
+		public double VerticalOffset => scrollViewer != null ? scrollViewer.VerticalOffset : 0;
 
 		/// <summary>
 		/// Gets the horizontal scroll position.
 		/// </summary>
-		public double HorizontalOffset {
-			get {
-				return scrollViewer != null ? scrollViewer.HorizontalOffset : 0;
-			}
-		}
+		public double HorizontalOffset => scrollViewer != null ? scrollViewer.HorizontalOffset : 0;
+
 		#endregion
 
 		#region TextBox methods
@@ -837,12 +804,8 @@ namespace ICSharpCode.AvalonEdit
 		/// </summary>
 		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
 		public int CaretOffset {
-			get {
-				return textArea.Caret.Offset;
-			}
-			set {
-				textArea.Caret.Offset = value;
-			}
+			get => textArea.Caret.Offset;
+			set => textArea.Caret.Offset = value;
 		}
 
 		/// <summary>
@@ -856,9 +819,7 @@ namespace ICSharpCode.AvalonEdit
 				else
 					return textArea.Selection.SurroundingSegment.Offset;
 			}
-			set {
-				Select(value, SelectionLength);
-			}
+			set => Select(value, SelectionLength);
 		}
 
 		/// <summary>
@@ -872,9 +833,7 @@ namespace ICSharpCode.AvalonEdit
 				else
 					return 0;
 			}
-			set {
-				Select(SelectionStart, value);
-			}
+			set => Select(SelectionStart, value);
 		}
 
 		/// <summary>
@@ -957,8 +916,8 @@ namespace ICSharpCode.AvalonEdit
 		/// </remarks>
 		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
 		public Encoding Encoding {
-			get { return (Encoding)GetValue(EncodingProperty); }
-			set { SetValue(EncodingProperty, value); }
+			get => (Encoding)GetValue(EncodingProperty);
+			set => SetValue(EncodingProperty, value);
 		}
 
 		/// <summary>
@@ -1025,32 +984,32 @@ namespace ICSharpCode.AvalonEdit
 		/// Occurs when the mouse has hovered over a fixed location for some time.
 		/// </summary>
 		public event MouseEventHandler PreviewMouseHover {
-			add { AddHandler(PreviewMouseHoverEvent, value); }
-			remove { RemoveHandler(PreviewMouseHoverEvent, value); }
+			add => AddHandler(PreviewMouseHoverEvent, value);
+			remove => RemoveHandler(PreviewMouseHoverEvent, value);
 		}
 
 		/// <summary>
 		/// Occurs when the mouse has hovered over a fixed location for some time.
 		/// </summary>
 		public event MouseEventHandler MouseHover {
-			add { AddHandler(MouseHoverEvent, value); }
-			remove { RemoveHandler(MouseHoverEvent, value); }
+			add => AddHandler(MouseHoverEvent, value);
+			remove => RemoveHandler(MouseHoverEvent, value);
 		}
 
 		/// <summary>
 		/// Occurs when the mouse had previously hovered but now started moving again.
 		/// </summary>
 		public event MouseEventHandler PreviewMouseHoverStopped {
-			add { AddHandler(PreviewMouseHoverStoppedEvent, value); }
-			remove { RemoveHandler(PreviewMouseHoverStoppedEvent, value); }
+			add => AddHandler(PreviewMouseHoverStoppedEvent, value);
+			remove => RemoveHandler(PreviewMouseHoverStoppedEvent, value);
 		}
 
 		/// <summary>
 		/// Occurs when the mouse had previously hovered but now started moving again.
 		/// </summary>
 		public event MouseEventHandler MouseHoverStopped {
-			add { AddHandler(MouseHoverStoppedEvent, value); }
-			remove { RemoveHandler(MouseHoverStoppedEvent, value); }
+			add => AddHandler(MouseHoverStoppedEvent, value);
+			remove => RemoveHandler(MouseHoverStoppedEvent, value);
 		}
 		#endregion
 
@@ -1064,8 +1023,8 @@ namespace ICSharpCode.AvalonEdit
 		/// Gets/Sets the horizontal scroll bar visibility.
 		/// </summary>
 		public ScrollBarVisibility HorizontalScrollBarVisibility {
-			get { return (ScrollBarVisibility)GetValue(HorizontalScrollBarVisibilityProperty); }
-			set { SetValue(HorizontalScrollBarVisibilityProperty, value); }
+			get => (ScrollBarVisibility)GetValue(HorizontalScrollBarVisibilityProperty);
+			set => SetValue(HorizontalScrollBarVisibilityProperty, value);
 		}
 
 		/// <summary>
@@ -1077,8 +1036,8 @@ namespace ICSharpCode.AvalonEdit
 		/// Gets/Sets the vertical scroll bar visibility.
 		/// </summary>
 		public ScrollBarVisibility VerticalScrollBarVisibility {
-			get { return (ScrollBarVisibility)GetValue(VerticalScrollBarVisibilityProperty); }
-			set { SetValue(VerticalScrollBarVisibilityProperty, value); }
+			get => (ScrollBarVisibility)GetValue(VerticalScrollBarVisibilityProperty);
+			set => SetValue(VerticalScrollBarVisibilityProperty, value);
 		}
 		#endregion
 
